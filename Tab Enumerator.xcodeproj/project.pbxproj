@@ -1,0 +1,779 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5ECFA6AB2FB24A1400AFE340 /* Tab Enumerator Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5ECFA6AA2FB24A1400AFE340 /* Tab Enumerator Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5ECFA6952FB24A1400AFE340 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ECFA6722FB24A1300AFE340 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ECFA6792FB24A1300AFE340;
+			remoteInfo = "Tab Enumerator";
+		};
+		5ECFA69F2FB24A1400AFE340 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ECFA6722FB24A1300AFE340 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ECFA6792FB24A1300AFE340;
+			remoteInfo = "Tab Enumerator";
+		};
+		5ECFA6AC2FB24A1400AFE340 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ECFA6722FB24A1300AFE340 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ECFA6A92FB24A1400AFE340;
+			remoteInfo = "Tab Enumerator Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5ECFA6C92FB24A1500AFE340 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5ECFA6AB2FB24A1400AFE340 /* Tab Enumerator Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5ECFA67A2FB24A1300AFE340 /* Tab Enumerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tab Enumerator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ECFA6942FB24A1400AFE340 /* Tab EnumeratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tab EnumeratorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ECFA69E2FB24A1400AFE340 /* Tab EnumeratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tab EnumeratorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ECFA6AA2FB24A1400AFE340 /* Tab Enumerator Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tab Enumerator Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5ECFA6C32FB24A1500AFE340 /* Exceptions for "Tab Enumerator Extension" folder in "Tab Enumerator Extension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5ECFA6A92FB24A1400AFE340 /* Tab Enumerator Extension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5ECFA67C2FB24A1300AFE340 /* Tab Enumerator */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Tab Enumerator";
+			sourceTree = "<group>";
+		};
+		5ECFA6972FB24A1400AFE340 /* Tab EnumeratorTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Tab EnumeratorTests";
+			sourceTree = "<group>";
+		};
+		5ECFA6A12FB24A1400AFE340 /* Tab EnumeratorUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Tab EnumeratorUITests";
+			sourceTree = "<group>";
+		};
+		5ECFA6AE2FB24A1400AFE340 /* Tab Enumerator Extension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5ECFA6C32FB24A1500AFE340 /* Exceptions for "Tab Enumerator Extension" folder in "Tab Enumerator Extension" target */,
+			);
+			explicitFolders = (
+				Resources/_locales,
+				Resources/images,
+			);
+			path = "Tab Enumerator Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5ECFA6772FB24A1300AFE340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ECFA6912FB24A1400AFE340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ECFA69B2FB24A1400AFE340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ECFA6A72FB24A1400AFE340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5ECFA6712FB24A1300AFE340 = {
+			isa = PBXGroup;
+			children = (
+				5ECFA67C2FB24A1300AFE340 /* Tab Enumerator */,
+				5ECFA6972FB24A1400AFE340 /* Tab EnumeratorTests */,
+				5ECFA6A12FB24A1400AFE340 /* Tab EnumeratorUITests */,
+				5ECFA6AE2FB24A1400AFE340 /* Tab Enumerator Extension */,
+				5ECFA67B2FB24A1300AFE340 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5ECFA67B2FB24A1300AFE340 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5ECFA67A2FB24A1300AFE340 /* Tab Enumerator.app */,
+				5ECFA6942FB24A1400AFE340 /* Tab EnumeratorTests.xctest */,
+				5ECFA69E2FB24A1400AFE340 /* Tab EnumeratorUITests.xctest */,
+				5ECFA6AA2FB24A1400AFE340 /* Tab Enumerator Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5ECFA6792FB24A1300AFE340 /* Tab Enumerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ECFA6CA2FB24A1500AFE340 /* Build configuration list for PBXNativeTarget "Tab Enumerator" */;
+			buildPhases = (
+				5ECFA6762FB24A1300AFE340 /* Sources */,
+				5ECFA6772FB24A1300AFE340 /* Frameworks */,
+				5ECFA6782FB24A1300AFE340 /* Resources */,
+				5ECFA6C92FB24A1500AFE340 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5ECFA6AD2FB24A1400AFE340 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5ECFA67C2FB24A1300AFE340 /* Tab Enumerator */,
+			);
+			name = "Tab Enumerator";
+			packageProductDependencies = (
+			);
+			productName = "Tab Enumerator";
+			productReference = 5ECFA67A2FB24A1300AFE340 /* Tab Enumerator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5ECFA6932FB24A1400AFE340 /* Tab EnumeratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ECFA6CD2FB24A1500AFE340 /* Build configuration list for PBXNativeTarget "Tab EnumeratorTests" */;
+			buildPhases = (
+				5ECFA6902FB24A1400AFE340 /* Sources */,
+				5ECFA6912FB24A1400AFE340 /* Frameworks */,
+				5ECFA6922FB24A1400AFE340 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5ECFA6962FB24A1400AFE340 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5ECFA6972FB24A1400AFE340 /* Tab EnumeratorTests */,
+			);
+			name = "Tab EnumeratorTests";
+			packageProductDependencies = (
+			);
+			productName = "Tab EnumeratorTests";
+			productReference = 5ECFA6942FB24A1400AFE340 /* Tab EnumeratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5ECFA69D2FB24A1400AFE340 /* Tab EnumeratorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ECFA6D02FB24A1500AFE340 /* Build configuration list for PBXNativeTarget "Tab EnumeratorUITests" */;
+			buildPhases = (
+				5ECFA69A2FB24A1400AFE340 /* Sources */,
+				5ECFA69B2FB24A1400AFE340 /* Frameworks */,
+				5ECFA69C2FB24A1400AFE340 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5ECFA6A02FB24A1400AFE340 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5ECFA6A12FB24A1400AFE340 /* Tab EnumeratorUITests */,
+			);
+			name = "Tab EnumeratorUITests";
+			packageProductDependencies = (
+			);
+			productName = "Tab EnumeratorUITests";
+			productReference = 5ECFA69E2FB24A1400AFE340 /* Tab EnumeratorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		5ECFA6A92FB24A1400AFE340 /* Tab Enumerator Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ECFA6C42FB24A1500AFE340 /* Build configuration list for PBXNativeTarget "Tab Enumerator Extension" */;
+			buildPhases = (
+				5ECFA6A62FB24A1400AFE340 /* Sources */,
+				5ECFA6A72FB24A1400AFE340 /* Frameworks */,
+				5ECFA6A82FB24A1400AFE340 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5ECFA6AE2FB24A1400AFE340 /* Tab Enumerator Extension */,
+			);
+			name = "Tab Enumerator Extension";
+			packageProductDependencies = (
+			);
+			productName = "Tab Enumerator Extension";
+			productReference = 5ECFA6AA2FB24A1400AFE340 /* Tab Enumerator Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5ECFA6722FB24A1300AFE340 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					5ECFA6792FB24A1300AFE340 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+					5ECFA6932FB24A1400AFE340 = {
+						CreatedOnToolsVersion = 26.4.1;
+						TestTargetID = 5ECFA6792FB24A1300AFE340;
+					};
+					5ECFA69D2FB24A1400AFE340 = {
+						CreatedOnToolsVersion = 26.4.1;
+						TestTargetID = 5ECFA6792FB24A1300AFE340;
+					};
+					5ECFA6A92FB24A1400AFE340 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 5ECFA6752FB24A1300AFE340 /* Build configuration list for PBXProject "Tab Enumerator" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5ECFA6712FB24A1300AFE340;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5ECFA67B2FB24A1300AFE340 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5ECFA6792FB24A1300AFE340 /* Tab Enumerator */,
+				5ECFA6932FB24A1400AFE340 /* Tab EnumeratorTests */,
+				5ECFA69D2FB24A1400AFE340 /* Tab EnumeratorUITests */,
+				5ECFA6A92FB24A1400AFE340 /* Tab Enumerator Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5ECFA6782FB24A1300AFE340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ECFA6922FB24A1400AFE340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ECFA69C2FB24A1400AFE340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ECFA6A82FB24A1400AFE340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5ECFA6762FB24A1300AFE340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ECFA6902FB24A1400AFE340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ECFA69A2FB24A1400AFE340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ECFA6A62FB24A1400AFE340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5ECFA6962FB24A1400AFE340 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ECFA6792FB24A1300AFE340 /* Tab Enumerator */;
+			targetProxy = 5ECFA6952FB24A1400AFE340 /* PBXContainerItemProxy */;
+		};
+		5ECFA6A02FB24A1400AFE340 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ECFA6792FB24A1300AFE340 /* Tab Enumerator */;
+			targetProxy = 5ECFA69F2FB24A1400AFE340 /* PBXContainerItemProxy */;
+		};
+		5ECFA6AD2FB24A1400AFE340 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ECFA6A92FB24A1400AFE340 /* Tab Enumerator Extension */;
+			targetProxy = 5ECFA6AC2FB24A1400AFE340 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5ECFA6C52FB24A1500AFE340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GGDXETZQR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Tab Enumerator Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tab Enumerator Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-Enumerator.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5ECFA6C62FB24A1500AFE340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GGDXETZQR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Tab Enumerator Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tab Enumerator Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-Enumerator.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		5ECFA6C72FB24A1500AFE340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7GGDXETZQR;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5ECFA6C82FB24A1500AFE340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7GGDXETZQR;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		5ECFA6CB2FB24A1500AFE340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GGDXETZQR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tab Enumerator";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-Enumerator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5ECFA6CC2FB24A1500AFE340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GGDXETZQR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tab Enumerator";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-Enumerator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		5ECFA6CE2FB24A1500AFE340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GGDXETZQR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-EnumeratorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tab Enumerator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tab Enumerator";
+			};
+			name = Debug;
+		};
+		5ECFA6CF2FB24A1500AFE340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GGDXETZQR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-EnumeratorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tab Enumerator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tab Enumerator";
+			};
+			name = Release;
+		};
+		5ECFA6D12FB24A1500AFE340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GGDXETZQR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-EnumeratorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Tab Enumerator";
+			};
+			name = Debug;
+		};
+		5ECFA6D22FB24A1500AFE340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GGDXETZQR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-EnumeratorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Tab Enumerator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5ECFA6752FB24A1300AFE340 /* Build configuration list for PBXProject "Tab Enumerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECFA6C72FB24A1500AFE340 /* Debug */,
+				5ECFA6C82FB24A1500AFE340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ECFA6C42FB24A1500AFE340 /* Build configuration list for PBXNativeTarget "Tab Enumerator Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECFA6C52FB24A1500AFE340 /* Debug */,
+				5ECFA6C62FB24A1500AFE340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ECFA6CA2FB24A1500AFE340 /* Build configuration list for PBXNativeTarget "Tab Enumerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECFA6CB2FB24A1500AFE340 /* Debug */,
+				5ECFA6CC2FB24A1500AFE340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ECFA6CD2FB24A1500AFE340 /* Build configuration list for PBXNativeTarget "Tab EnumeratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECFA6CE2FB24A1500AFE340 /* Debug */,
+				5ECFA6CF2FB24A1500AFE340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ECFA6D02FB24A1500AFE340 /* Build configuration list for PBXNativeTarget "Tab EnumeratorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECFA6D12FB24A1500AFE340 /* Debug */,
+				5ECFA6D22FB24A1500AFE340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5ECFA6722FB24A1300AFE340 /* Project object */;
+}
