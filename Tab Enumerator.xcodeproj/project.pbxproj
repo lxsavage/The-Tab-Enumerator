@@ -35,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5EA6B4E12FB3CE7C00468175 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		5ECFA67A2FB24A1300AFE340 /* Tab Enumerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tab Enumerator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECFA6AA2FB24A1400AFE340 /* Tab Enumerator Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tab Enumerator Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,9 +104,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EA6B4E02FB3CE6400468175 /* Project Information */ = {
+			isa = PBXGroup;
+			children = (
+				5EA6B4E12FB3CE7C00468175 /* README.md */,
+			);
+			path = "Project Information";
+			sourceTree = "<group>";
+		};
 		5ECFA6712FB24A1300AFE340 = {
 			isa = PBXGroup;
 			children = (
+				5EA6B4E02FB3CE6400468175 /* Project Information */,
 				5EA6B2852FB3AB9A00468175 /* Chrome Extension */,
 				5ECFA67C2FB24A1300AFE340 /* Tab Enumerator */,
 				5ECFA6AE2FB24A1400AFE340 /* Tab Enumerator Extension */,
