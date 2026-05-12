@@ -11,20 +11,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5ECFA6952FB24A1400AFE340 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5ECFA6722FB24A1300AFE340 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5ECFA6792FB24A1300AFE340;
-			remoteInfo = "Tab Enumerator";
-		};
-		5ECFA69F2FB24A1400AFE340 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5ECFA6722FB24A1300AFE340 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5ECFA6792FB24A1300AFE340;
-			remoteInfo = "Tab Enumerator";
-		};
 		5ECFA6AC2FB24A1400AFE340 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5ECFA6722FB24A1300AFE340 /* Project object */;
@@ -50,12 +36,18 @@
 
 /* Begin PBXFileReference section */
 		5ECFA67A2FB24A1300AFE340 /* Tab Enumerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tab Enumerator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5ECFA6942FB24A1400AFE340 /* Tab EnumeratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tab EnumeratorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5ECFA69E2FB24A1400AFE340 /* Tab EnumeratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tab EnumeratorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECFA6AA2FB24A1400AFE340 /* Tab Enumerator Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tab Enumerator Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5EA6B4DB2FB3BC4100468175 /* Exceptions for "Chrome Extension" folder in "Tab Enumerator" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"make-manifest.sh",
+				Makefile,
+			);
+			target = 5ECFA6792FB24A1300AFE340 /* Tab Enumerator */;
+		};
 		5ECFA6C32FB24A1500AFE340 /* Exceptions for "Tab Enumerator Extension" folder in "Tab Enumerator Extension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -66,19 +58,17 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		5EA6B2852FB3AB9A00468175 /* Chrome Extension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5EA6B4DB2FB3BC4100468175 /* Exceptions for "Chrome Extension" folder in "Tab Enumerator" target */,
+			);
+			path = "Chrome Extension";
+			sourceTree = "<group>";
+		};
 		5ECFA67C2FB24A1300AFE340 /* Tab Enumerator */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Tab Enumerator";
-			sourceTree = "<group>";
-		};
-		5ECFA6972FB24A1400AFE340 /* Tab EnumeratorTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Tab EnumeratorTests";
-			sourceTree = "<group>";
-		};
-		5ECFA6A12FB24A1400AFE340 /* Tab EnumeratorUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Tab EnumeratorUITests";
 			sourceTree = "<group>";
 		};
 		5ECFA6AE2FB24A1400AFE340 /* Tab Enumerator Extension */ = {
@@ -103,20 +93,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5ECFA6912FB24A1400AFE340 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5ECFA69B2FB24A1400AFE340 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5ECFA6A72FB24A1400AFE340 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,9 +106,8 @@
 		5ECFA6712FB24A1300AFE340 = {
 			isa = PBXGroup;
 			children = (
+				5EA6B2852FB3AB9A00468175 /* Chrome Extension */,
 				5ECFA67C2FB24A1300AFE340 /* Tab Enumerator */,
-				5ECFA6972FB24A1400AFE340 /* Tab EnumeratorTests */,
-				5ECFA6A12FB24A1400AFE340 /* Tab EnumeratorUITests */,
 				5ECFA6AE2FB24A1400AFE340 /* Tab Enumerator Extension */,
 				5ECFA67B2FB24A1300AFE340 /* Products */,
 			);
@@ -142,8 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				5ECFA67A2FB24A1300AFE340 /* Tab Enumerator.app */,
-				5ECFA6942FB24A1400AFE340 /* Tab EnumeratorTests.xctest */,
-				5ECFA69E2FB24A1400AFE340 /* Tab EnumeratorUITests.xctest */,
 				5ECFA6AA2FB24A1400AFE340 /* Tab Enumerator Extension.appex */,
 			);
 			name = Products;
@@ -167,6 +140,7 @@
 				5ECFA6AD2FB24A1400AFE340 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				5EA6B2852FB3AB9A00468175 /* Chrome Extension */,
 				5ECFA67C2FB24A1300AFE340 /* Tab Enumerator */,
 			);
 			name = "Tab Enumerator";
@@ -175,52 +149,6 @@
 			productName = "Tab Enumerator";
 			productReference = 5ECFA67A2FB24A1300AFE340 /* Tab Enumerator.app */;
 			productType = "com.apple.product-type.application";
-		};
-		5ECFA6932FB24A1400AFE340 /* Tab EnumeratorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5ECFA6CD2FB24A1500AFE340 /* Build configuration list for PBXNativeTarget "Tab EnumeratorTests" */;
-			buildPhases = (
-				5ECFA6902FB24A1400AFE340 /* Sources */,
-				5ECFA6912FB24A1400AFE340 /* Frameworks */,
-				5ECFA6922FB24A1400AFE340 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5ECFA6962FB24A1400AFE340 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5ECFA6972FB24A1400AFE340 /* Tab EnumeratorTests */,
-			);
-			name = "Tab EnumeratorTests";
-			packageProductDependencies = (
-			);
-			productName = "Tab EnumeratorTests";
-			productReference = 5ECFA6942FB24A1400AFE340 /* Tab EnumeratorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5ECFA69D2FB24A1400AFE340 /* Tab EnumeratorUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5ECFA6D02FB24A1500AFE340 /* Build configuration list for PBXNativeTarget "Tab EnumeratorUITests" */;
-			buildPhases = (
-				5ECFA69A2FB24A1400AFE340 /* Sources */,
-				5ECFA69B2FB24A1400AFE340 /* Frameworks */,
-				5ECFA69C2FB24A1400AFE340 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5ECFA6A02FB24A1400AFE340 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5ECFA6A12FB24A1400AFE340 /* Tab EnumeratorUITests */,
-			);
-			name = "Tab EnumeratorUITests";
-			packageProductDependencies = (
-			);
-			productName = "Tab EnumeratorUITests";
-			productReference = 5ECFA69E2FB24A1400AFE340 /* Tab EnumeratorUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		5ECFA6A92FB24A1400AFE340 /* Tab Enumerator Extension */ = {
 			isa = PBXNativeTarget;
@@ -252,18 +180,10 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2640;
-				LastUpgradeCheck = 2640;
+				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					5ECFA6792FB24A1300AFE340 = {
 						CreatedOnToolsVersion = 26.4.1;
-					};
-					5ECFA6932FB24A1400AFE340 = {
-						CreatedOnToolsVersion = 26.4.1;
-						TestTargetID = 5ECFA6792FB24A1300AFE340;
-					};
-					5ECFA69D2FB24A1400AFE340 = {
-						CreatedOnToolsVersion = 26.4.1;
-						TestTargetID = 5ECFA6792FB24A1300AFE340;
 					};
 					5ECFA6A92FB24A1400AFE340 = {
 						CreatedOnToolsVersion = 26.4.1;
@@ -285,8 +205,6 @@
 			projectRoot = "";
 			targets = (
 				5ECFA6792FB24A1300AFE340 /* Tab Enumerator */,
-				5ECFA6932FB24A1400AFE340 /* Tab EnumeratorTests */,
-				5ECFA69D2FB24A1400AFE340 /* Tab EnumeratorUITests */,
 				5ECFA6A92FB24A1400AFE340 /* Tab Enumerator Extension */,
 			);
 		};
@@ -294,20 +212,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		5ECFA6782FB24A1300AFE340 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5ECFA6922FB24A1400AFE340 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5ECFA69C2FB24A1400AFE340 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,20 +235,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5ECFA6902FB24A1400AFE340 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5ECFA69A2FB24A1400AFE340 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5ECFA6A62FB24A1400AFE340 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,16 +245,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5ECFA6962FB24A1400AFE340 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5ECFA6792FB24A1300AFE340 /* Tab Enumerator */;
-			targetProxy = 5ECFA6952FB24A1400AFE340 /* PBXContainerItemProxy */;
-		};
-		5ECFA6A02FB24A1400AFE340 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5ECFA6792FB24A1300AFE340 /* Tab Enumerator */;
-			targetProxy = 5ECFA69F2FB24A1400AFE340 /* PBXContainerItemProxy */;
-		};
 		5ECFA6AD2FB24A1400AFE340 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5ECFA6A92FB24A1400AFE340 /* Tab Enumerator Extension */;
@@ -378,26 +258,36 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7GGDXETZQR;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Tab Enumerator Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Tab Enumerator Extension";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "The Tab Enumerator";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © Logan Savage 2026. All Rights Reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-Enumerator.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.logansavage.TabEnumerator.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -413,26 +303,36 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7GGDXETZQR;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Tab Enumerator Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Tab Enumerator Extension";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "The Tab Enumerator";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © Logan Savage 2026. All Rights Reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-Enumerator.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.logansavage.TabEnumerator.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -477,6 +377,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 7GGDXETZQR;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -502,6 +403,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -541,6 +443,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7GGDXETZQR;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -559,6 +462,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -571,28 +475,39 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7GGDXETZQR;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Tab Enumerator";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "The Tab Enumerator";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © Logan Savage 2026. All Rights Reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MARKETING_VERSION = 0.1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-Enumerator";
+				PRODUCT_BUNDLE_IDENTIFIER = com.logansavage.TabEnumerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -612,28 +527,39 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7GGDXETZQR;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Tab Enumerator";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "The Tab Enumerator";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © Logan Savage 2026. All Rights Reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MARKETING_VERSION = 0.1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-Enumerator";
+				PRODUCT_BUNDLE_IDENTIFIER = com.logansavage.TabEnumerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -642,86 +568,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		5ECFA6CE2FB24A1500AFE340 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7GGDXETZQR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-EnumeratorTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tab Enumerator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tab Enumerator";
-			};
-			name = Debug;
-		};
-		5ECFA6CF2FB24A1500AFE340 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7GGDXETZQR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-EnumeratorTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tab Enumerator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tab Enumerator";
-			};
-			name = Release;
-		};
-		5ECFA6D12FB24A1500AFE340 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7GGDXETZQR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-EnumeratorUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Tab Enumerator";
-			};
-			name = Debug;
-		};
-		5ECFA6D22FB24A1500AFE340 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7GGDXETZQR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.logansavage.Tab-EnumeratorUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Tab Enumerator";
 			};
 			name = Release;
 		};
@@ -751,24 +597,6 @@
 			buildConfigurations = (
 				5ECFA6CB2FB24A1500AFE340 /* Debug */,
 				5ECFA6CC2FB24A1500AFE340 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5ECFA6CD2FB24A1500AFE340 /* Build configuration list for PBXNativeTarget "Tab EnumeratorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5ECFA6CE2FB24A1500AFE340 /* Debug */,
-				5ECFA6CF2FB24A1500AFE340 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5ECFA6D02FB24A1500AFE340 /* Build configuration list for PBXNativeTarget "Tab EnumeratorUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5ECFA6D12FB24A1500AFE340 /* Debug */,
-				5ECFA6D22FB24A1500AFE340 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -4,7 +4,7 @@
 
     "name": "__MSG_extension_name__",
     "description": "__MSG_extension_description__",
-    "version": "1.0",
+    "version": "0.1.0",
 
     "icons": {
         "48": "images/icon-48.png",
@@ -15,19 +15,41 @@
     },
 
     "background": {
-        "scripts": [ "background.js" ],
+        "service_worker": "te-worker.js",
         "type": "module"
     },
 
-    "content_scripts": [{
-        "js": [ "content.js" ],
-        "matches": [ "*://example.com/*" ]
-    }],
+    "content_scripts": [
+        {
+            "js": [
+                "te-content.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "images/nums/*",
+                "_favicon/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
 
     "action": {
         "default_popup": "popup.html",
         "default_icon": "images/toolbar-icon.svg"
     },
 
-    "permissions": [ ]
+    "permissions": [
+        "<all_urls>",
+        "tabs",
+        "scripting"
+    ]
 }

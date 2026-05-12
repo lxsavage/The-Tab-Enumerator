@@ -9,7 +9,7 @@ import Cocoa
 import SafariServices
 import WebKit
 
-let extensionBundleIdentifier = "com.logansavage.Tab-Enumerator.Extension"
+let extensionBundleIdentifier = "com.logansavage.TabEnumerator.Extension"
 
 class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHandler {
 
