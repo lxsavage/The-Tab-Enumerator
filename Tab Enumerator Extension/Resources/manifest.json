@@ -15,18 +15,15 @@
     },
 
     "background": {
-        "service_worker": "te-worker.js",
+        "service_worker": "service-worker.js",
         "type": "module"
     },
 
     "content_scripts": [
         {
-            "js": [
-                "te-content.js"
-            ],
-            "matches": [
-                "<all_urls>"
-            ]
+            "js": ["content.js"],
+            "matches": ["<all_urls>"],
+            "run_at": "document_start"
         }
     ],
 
@@ -47,9 +44,5 @@
         "default_icon": "images/toolbar-icon.svg"
     },
 
-    "permissions": [
-        "<all_urls>",
-        "tabs",
-        "scripting"
-    ]
+    "permissions": [ ]
 }

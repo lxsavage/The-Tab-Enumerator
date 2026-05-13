@@ -8,19 +8,26 @@ BUILD_DIR := $(shell dirname "$(realpath $(MAKEFILE_LIST))")
 all: TabEnumerator.zip
 
 clean:
-	-rm TabEnumerator.zip
+	@-rm TabEnumerator.zip > /dev/null 2>&1
 
 TabEnumerator.zip: resources.zip manifest.json
-	zip -m $^
-	mv $< $@
+	@zip -qm $^
+	@mv $< $@
+
+	@echo "Created Manifest V3 extension as $@"
 
 resources.zip:
-	cd "$(BUILD_DIR)/../Tab Enumerator Extension/Resources" && \
-	zip -r "$@" . && \
-	mv "$@" "$(BUILD_DIR)/$@"
+	@-rm "$(BUILD_DIR)/$@" 2>&1
+	@cd "$(BUILD_DIR)/../Tab Enumerator Extension/Resources" && \
+		zip -qr "$@" . && \
+		mv "$@" "$(BUILD_DIR)/$@"
+
+	@echo "Created resource archive"
 
 manifest.json:
 	@. "$(BUILD_DIR)/make-manifest.sh" \
 		"$(BUILD_DIR)/../Tab Enumerator Extension/Resources/manifest.json" \
 		"$(BUILD_DIR)/../Tab Enumerator Extension/Resources/_locales/en/messages.json" \
 	 > $@
+
+	@echo "Generated manifest.json"

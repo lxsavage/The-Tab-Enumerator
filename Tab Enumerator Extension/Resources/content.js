@@ -1,10 +1,10 @@
 // Safari mode: set each tab title "[#] <title>" instead of favicon for numbered
 //              tabs due to its favicon caching preventing dynamic updates
 const isSafari = navigator.vendor &&
-                 navigator.vendor.indexOf('Apple') > -1 &&
-                 navigator.userAgent &&
-                 navigator.userAgent.indexOf('CriOS') == -1 &&
-                 navigator.userAgent.indexOf('FxiOS') == -1;
+    navigator.vendor.indexOf('Apple') > -1 &&
+    navigator.userAgent &&
+    navigator.userAgent.indexOf('CriOS') == -1 &&
+    navigator.userAgent.indexOf('FxiOS') == -1;
 
 let loadedOriginalState = false;
 
@@ -80,11 +80,13 @@ const getModifier = isMacOS
 
 document.addEventListener('keydown', evt => {
     if (!getModifier(evt)) return;
+
     chrome.runtime.sendMessage({command: 'set-favicon' });
 });
 
 document.addEventListener('keyup', evt => {
     if (!getModifier(evt)) return;
+    
     chrome.runtime.sendMessage({command: 'restore-favicon'});
 });
 

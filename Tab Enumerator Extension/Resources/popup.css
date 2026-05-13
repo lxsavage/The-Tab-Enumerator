@@ -3,13 +3,31 @@
 }
 
 body {
-    width: 250px;
+    min-width: 310px;
     padding: 0 10px;
 
     font-family: system-ui;
+    text-align: center;
+}
+
+footer {
+    font-size: 8pt;
+    font-weight: lighter;
+    text-align: left;
+    opacity: 0.5;
 }
 
 .tip {
     font-size: 12pt;
-    text-align: center;
+    font-weight: lighter;
+}
+
+#modifier {
+    font-weight: bold;
+}
+
+.version {
+    font-weight: normal;
+    font-size: 12px;
+    opacity: 0.5;
 }
