@@ -1,6 +1,6 @@
-# The Tab Enumerator
+![App Icon](/Tab%20Enumerator%20Extension/Resources/images/icon-128.png)
 
-![App Icon](./Tab Enumerator/Resources/Icon.png)
+# The Tab Enumerator
 
 ## Background
 
