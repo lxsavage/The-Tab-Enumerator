@@ -1,5 +1,7 @@
 # The Tab Enumerator
 
+![App Icon](./Tab Enumerator/Resources/Icon.png)
+
 ## Background
 
 Most modern web browsers provide a keyboard shortcut for `CTRL/CMD + #`, where
