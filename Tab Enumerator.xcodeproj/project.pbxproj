@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E2BE76E2FB42E260033025C /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 5E2BE76D2FB42E260033025C /* AppIcon.icon */; };
+		5E2BE76F2FB42E260033025C /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 5E2BE76D2FB42E260033025C /* AppIcon.icon */; };
 		5ECFA6AB2FB24A1400AFE340 /* Tab Enumerator Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5ECFA6AA2FB24A1400AFE340 /* Tab Enumerator Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E2BE76D2FB42E260033025C /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		5EA6B4E12FB3CE7C00468175 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		5EA6B4E42FB3D22000468175 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		5ECFA67A2FB24A1300AFE340 /* Tab Enumerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tab Enumerator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +113,7 @@
 			children = (
 				5EA6B4E42FB3D22000468175 /* .gitignore */,
 				5EA6B4E12FB3CE7C00468175 /* README.md */,
+				5E2BE76D2FB42E260033025C /* AppIcon.icon */,
 			);
 			path = "Project Information";
 			sourceTree = "<group>";
@@ -227,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E2BE76F2FB42E260033025C /* AppIcon.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E2BE76E2FB42E260033025C /* AppIcon.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +300,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -339,7 +345,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -512,7 +518,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -564,7 +570,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,

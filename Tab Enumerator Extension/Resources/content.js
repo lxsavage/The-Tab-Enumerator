@@ -1,11 +1,15 @@
-// Safari mode: set each tab title "[#] <title>" instead of favicon for numbered
-//              tabs due to its favicon caching preventing dynamic updates
+const isMacOS = window.navigator.userAgentData
+    ? window.navigator.userAgentData.platform === 'macOS'
+    : /Mac/i.test(window.navigator.userAgent);
+
 const isSafari = navigator.vendor &&
     navigator.vendor.indexOf('Apple') > -1 &&
     navigator.userAgent &&
     navigator.userAgent.indexOf('CriOS') == -1 &&
     navigator.userAgent.indexOf('FxiOS') == -1;
 
+// Keep track of if the original state of the title/favicons on the page are
+// stored in origTitle/origFaviconLinks for restoring in the future
 let loadedOriginalState = false;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -14,24 +18,22 @@ let loadedOriginalState = false;
 let origTitle = '';
 
 function setTabTitlePrefix(_, tabNum) {
-    const shouldFetchOriginalState = !loadedOriginalState;
+    if (!loadedOriginalState)
+        origTitle = document.title;
+
     loadedOriginalState = true;
-
-    if (shouldFetchOriginalState) origTitle = document.title;
-
     document.title = `[${tabNum}] ${origTitle}`;
 }
 
 function setTabFavicon(resource, tabNum) {
-    const shouldFetchOriginalState = !loadedOriginalState;
-    loadedOriginalState = true;
-
     for (const favicon of document.querySelectorAll("link[rel*='icon']")) {
-        if (shouldFetchOriginalState)
+        if (!loadedOriginalState)
             origFaviconLinks.push(favicon.cloneNode(true));
 
         favicon.remove();
     }
+
+    loadedOriginalState = true;
 
     const link = document.createElement('link');
     link.type = 'image/png';
@@ -40,6 +42,7 @@ function setTabFavicon(resource, tabNum) {
     document.head.appendChild(link);
 }
 
+// SHIM: prefix title instead of change favicon for Safari to work around its aggressive favicon caching
 const setTab = isSafari ? setTabTitlePrefix : setTabFavicon;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -65,15 +68,14 @@ function restoreTabFavicon() {
     }
 }
 
+// SHIM: prefix title instead of change favicon for Safari to work around its aggressive favicon caching
 const restoreTab = isSafari ? restoreTabTitlePrefix : restoreTabFavicon;
 
 ////////////////////////////////////////////////////////////////////////////////
 // Event handlers
 ////////////////////////////////////////////////////////////////////////////////
-const isMacOS = window.navigator.userAgentData
-    ? window.navigator.userAgentData.platform === 'macOS'
-    : /Mac/i.test(window.navigator.userAgent);
 
+// SHIM: MacOS has the tab jump shortcut as meta+number instead of ctrl+number
 const getModifier = isMacOS
     ? (event => event.key === 'Meta')
     : (event => event.key === 'Control');
@@ -86,7 +88,7 @@ document.addEventListener('keydown', evt => {
 
 document.addEventListener('keyup', evt => {
     if (!getModifier(evt)) return;
-    
+
     chrome.runtime.sendMessage({command: 'restore-favicon'});
 });
 
