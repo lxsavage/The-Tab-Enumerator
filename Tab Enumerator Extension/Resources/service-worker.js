@@ -1,7 +1,12 @@
+'use strict';
 const isSafari = navigator.vendor &&
     navigator.vendor.indexOf('Apple') > -1 &&
     navigator.userAgent.indexOf('CriOS') === -1 &&
     navigator.userAgent.indexOf('FxiOS') === -1;
+
+function log(msg) {
+    console.log('[Tab Enumerator; worker] ', msg);
+}
 
 function isRestrictedUrl(url) {
     return !url ||
@@ -14,8 +19,7 @@ function isRestrictedUrl(url) {
 }
 
 function getNumberIconPath(number) {
-    if (number === undefined) return tabFavicon(tab);
-    if (isSafari) return '';
+    if (number === undefined || isSafari) return '';
 
     return chrome.runtime.getURL(`/images/nums/n${number}.png`);
 }
@@ -26,19 +30,20 @@ async function handleSetFavicon() {
         if (isRestrictedUrl(tab.url)) continue;
         if (tab.index >= 8 && tab.index !== tabs.length - 1) continue;
 
+        // Safari does not use the number favicons, so retrieving them is unnecessary
+        const path = isSafari ? '' : getNumberIconPath(number);
+
         // Last tab will always display 9
-        const number = (tab.index === tabs.length - 1)
-            ? 9
-            : tab.index + 1;
+        const number = (tab.index === tabs.length - 1) ? 9 : tab.index + 1;
 
         try {
             await chrome.tabs.sendMessage(tab.id, {
                 command: 'set-favicon',
-                path: getNumberIconPath(number),
+                path,
                 number
             });
-        } catch (e) {
-            console.debug(`Tab ${tab.id} not ready:`, e.message);
+        } catch (ex) {
+            log(`tab ${tab.id} not ready: ` + ex.message.toString());
         }
     }
 }
@@ -50,14 +55,14 @@ async function handleRestoreFavicon() {
 
         try {
             await chrome.tabs.sendMessage(tab.id, { command: 'restore-favicon' });
-        } catch (e) {
-            console.debug(`Tab ${tab.id} not ready:`, e.message);
+        } catch (ex) {
+            log(`tab ${tab.id} not ready:` + ex.message.toString());
         }
     }
 }
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-    console.log('[SW] recv', msg);
+    log('recv: ' + msg);
     (async () => {
         switch (msg.command) {
             case 'set-favicon':
@@ -67,11 +72,12 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
                 await handleRestoreFavicon();
                 break;
             default:
-                console.debug('Unhandled command:', msg.command);
+                log('unhandled command:', msg.command);
         }
+        sendResponse(true);
     })();
 
-    return true; // keep channel open for async
+    return true;
 });
 
-chrome.runtime.onInstalled.addListener(() => console.log('[SW] installed'));
+chrome.runtime.onInstalled.addListener(() => log('installed'));

@@ -1,3 +1,4 @@
+'use strict';
 const isMacOS = window.navigator.userAgentData
     ? window.navigator.userAgentData.platform === 'macOS'
     : /Mac/i.test(window.navigator.userAgent);
@@ -107,6 +108,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             break;
         default:
             console.error('[Tab Enumerator] unhandled event: ', request.command);
+            sendResponse(false);
             break;
     }
 
