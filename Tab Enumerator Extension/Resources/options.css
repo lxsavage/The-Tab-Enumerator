@@ -54,10 +54,11 @@ div.right {
     justify-content: right;
 }
 
-input[type='submit'] {
+input[type="submit"] {
     margin-right: 10px;
     margin-top: 10px;
     -webkit-appearance: none;
+    appearance: none;
     padding: 5px;
     border-radius: 8px;
     padding: 5px 13px;
@@ -67,27 +68,27 @@ input[type='submit'] {
     color: white;
     cursor: pointer;
 }
-    input[type='submit']:hover {
-        border: 2px solid hsl(235.38, 81.25%, 68.63%);
-        background-color: whitesmoke;
-        color: black;
-        transition-duration: 100ms;
-    }
-    input[type='submit']:active {
-        border: 2px solid hsl(235.38, 81.25%, 88.63%);
-        color: hsl(0, 0%, 60%);
-        transition-duration: 50ms;
-    }
+input[type="submit"]:hover {
+    border: 2px solid hsl(235.38, 81.25%, 68.63%);
+    background-color: whitesmoke;
+    color: black;
+    transition-duration: 100ms;
+}
+input[type="submit"]:active {
+    border: 2px solid hsl(235.38, 81.25%, 88.63%);
+    color: hsl(0, 0%, 60%);
+    transition-duration: 50ms;
+}
 
 form fieldset {
     border-radius: 12px;
     -webkit-user-select: none;
     user-select: none;
 }
-    form fieldset label {
-        -webkit-user-select: none;
-        user-select: none;
-    }
+form fieldset label {
+    -webkit-user-select: none;
+    user-select: none;
+}
 
 .disabled {
     opacity: 50%;
