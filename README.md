@@ -48,3 +48,7 @@ needs to be manually built and installed into your browser of choice.
 7. Run the app and select "Quit and open safari settings..."
 8. Enable "The Tab Enumerator" and ensure it has all of its permissions
    approved (if any)
+
+## Additional Information
+
+[Number icons created by Hight Quality Icons - Flaticon](https://www.flaticon.com/free-icon/number-one_3840581)
