@@ -3,7 +3,11 @@
     "default_locale": "en",
     "name": "__MSG_extension_name__",
     "description": "__MSG_extension_description__",
-    "version": "0.1.1",
+    "version": "0.2.0",
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": true
+    },
     "icons": {
         "32": "images/icon-32.png",
         "128": "images/icon-128.png",
@@ -36,5 +40,5 @@
         "default_popup": "popup.html",
         "default_icon": "images/icon-32.png"
     },
-    "permissions": []
+    "permissions": ["storage"]
 }

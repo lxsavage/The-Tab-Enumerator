@@ -20,7 +20,31 @@ tabs in the current window to denote which tab `CTRL/CMD + #` will switch to.
 
 ## Installation
 
-TBD; use the Makefile in "Chrome Extension/" to generate the standard Manifest
-V3 version of the extension (as a .zip), or build and run the main extension
-app to load into Safari, after turning on Developer Mode and enabling unsigned
-extensions.
+This extension is not currently published on any extension marketplaces, so it
+needs to be manually built and installed into your browser of choice.
+
+## Build
+
+### Manifest V3 browsers (Chrome, Firefox, &c.)
+
+1. Run the makefile in the `Chrome Extension/` folder to generate a zipped
+   extension
+2. Navigate to extensions page
+3. Drag and drop the zipped extension into the extensions list (may need to
+   enable unsigned extensions)
+4. Enable the extension and ensure it has all of its permissions approved (if
+   any)
+
+### Safari
+
+1. Open the XCode project
+2. Create a product archive (Product>Archive)
+3. Select the newly-created archive and select "Distribute App" on the right
+   navigation pane
+4. Select the "Custom" distribution method
+5. Select "Copy App" and save the app in an easily-accessible folder
+6. Access the exported folder, then move "The Tab Enumerator.app" to your
+   Applications folder
+7. Run the app and select "Quit and open safari settings..."
+8. Enable "The Tab Enumerator" and ensure it has all of its permissions
+   approved (if any)

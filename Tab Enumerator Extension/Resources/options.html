@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="options.css" />
+        <script type="module" src="options.js"></script>
+        <title>TTE | Settings</title>
+    </head>
+    <body>
+        <div class="content">
+            <noscript>
+                <p class="danger">JavaScript is required for this page to work!</p>
+            </noscript>
+            <header>
+                <img src="images/icon-512.png" width="128" height="128" alt="Tab Enumerator Icon" />
+                <h2>Settings for The Tab Enumerator</h2>
+            </header>
+            <content>
+                <p id="settings-form-load">
+                    Loading...
+                </p>
+                <form id="settings-form" hidden>
+                    <fieldset>
+                        <legend>Appearance</legend>
+                        <label>
+                            <input type="checkbox" name="lasttab-9"/></input>
+                            Last tab should always be [9].
+                            <span title="If this is enabled, the last tab will always be numbered [9] (i.e., if you have 2 tabs, they will be numbered [1] and [9])">
+                                &#9432;
+                            </span>
+                        </label>
+
+                    </fieldset>
+                    <div class="right">
+                        <input type="submit" />
+                    </div>
+                </form>
+            </content>
+            <footer>
+                &copy; 2026 Logan Savage. All Rights Reserved.
+            </footer>
+        </div>
+    </body>
+</html>

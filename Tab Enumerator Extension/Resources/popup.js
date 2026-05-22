@@ -22,3 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // SHIM: MacOS has the tab jump shortcut modifier as meta instead of ctrl
     document.getElementById('modifier').innerHTML = '&#8984;'; // CMD symbol
 })
+
+document.getElementById("settings-button")
+    .addEventListener('click', () => chrome.runtime.openOptionsPage());

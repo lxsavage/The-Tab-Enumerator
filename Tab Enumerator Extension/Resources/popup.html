@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="popup.css">
-    <script type="module" src="popup.js"></script>
-</head>
-<body>
-    <h2>
-        <span id="tte-name"></span>
-        <span class="version">v<b id="tte-version"></span>
-    </h2>
-    <p class="tip">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="popup.css" />
+        <script type="module" src="popup.js"></script>
+    </head>
+    <body>
+        <img id="header-icon" src="images/icon-128.png" alt="Tab Enumerator Icon" />
+        <h2>
+            <span id="tte-name"></span>
+            <span class="version">v<b id="tte-version"></span>
+        </h2>
+        <p class="tip">
         Hold <span id="modifier">CTRL</span> to see tabs accessible by keyboard
         shortcut.
-    </p>
-    <footer>
-        <b>Note:</b> if you have just restarted your browser, you have to
-        manually click on all tabs to load the extension functionality.
-    </footer>
-</body>
+        </p>
+        <button id="settings-button">Settings</button>
+        <br />
+        <footer>
+            &copy; 2026 Logan Savage. All Rights Reserved.
+            <hr />
+            <b>Note:</b> if you have just restarted your browser, you have to
+            manually click on all tabs to load the extension functionality.
+        </footer>
+    </body>
 </html>
