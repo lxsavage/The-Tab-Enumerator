@@ -56,8 +56,6 @@ async function syncSettingsAsync() {
 
 loadSettingsAsync().then(() => {
     const $form = document.getElementById('settings-form');
-    const $load = document.getElementById('settings-form-load');
-
     $form.addEventListener('submit', async evt => {
         evt.preventDefault();
         await syncSettingsAsync();
@@ -65,7 +63,8 @@ loadSettingsAsync().then(() => {
         alert('Settings saved.');
         return false;
     });
-
     $form.removeAttribute('hidden');
-    $load.setAttribute('hidden', 'hidden');
+
+    document.getElementById('settings-form-load')
+        .setAttribute('hidden', 'hidden');
 });

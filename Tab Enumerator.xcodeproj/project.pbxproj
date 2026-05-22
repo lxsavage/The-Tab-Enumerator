@@ -38,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		5E2BE76D2FB42E260033025C /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		5E88FF442FC0017000C88BDB /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		5EA6B4E12FB3CE7C00468175 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		5EA6B4E42FB3D22000468175 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		5ECFA67A2FB24A1300AFE340 /* Tab Enumerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tab Enumerator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +112,7 @@
 		5EA6B4E02FB3CE6400468175 /* Project Information */ = {
 			isa = PBXGroup;
 			children = (
+				5E88FF442FC0017000C88BDB /* LICENSE.md */,
 				5EA6B4E42FB3D22000468175 /* .gitignore */,
 				5EA6B4E12FB3CE7C00468175 /* README.md */,
 				5E2BE76D2FB42E260033025C /* AppIcon.icon */,

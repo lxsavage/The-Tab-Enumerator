@@ -41,7 +41,10 @@ footer {
     opacity: 0.5;
 }
 
-button {
+.button {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: normal;
     margin-right: 10px;
     margin-top: 10px;
     -webkit-appearance: none;
@@ -54,15 +57,13 @@ button {
     color: white;
     cursor: pointer;
 }
-
-    button:hover {
+    .button:hover {
         border: 2px solid hsl(235.38, 81.25%, 68.63%);
         background-color: whitesmoke;
         color: black;
         transition-duration: 100ms;
     }
-
-    button:active {
+    .button:active {
         border: 2px solid hsl(235.38, 81.25%, 88.63%);
         color: hsl(0, 0%, 60%);
         transition-duration: 50ms;
