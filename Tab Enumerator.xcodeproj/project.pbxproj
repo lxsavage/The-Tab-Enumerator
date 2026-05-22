@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		5E2BE76F2FB42E260033025C /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 5E2BE76D2FB42E260033025C /* AppIcon.icon */; };
 		5E88FF452FC00BF700C88BDB /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 5E2BE76D2FB42E260033025C /* AppIcon.icon */; };
+		5E92423F2FC01BBA00019387 /* Tab Enumerator Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5E694F3B2FC0154700457DD7 /* Tab Enumerator Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5EC899162FC023FE0017BBAC /* Tab Enumerator Extension.appex in Resources */ = {isa = PBXBuildFile; fileRef = 5E694F3B2FC0154700457DD7 /* Tab Enumerator Extension.appex */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5ECFA6AC2FB24A1400AFE340 /* PBXContainerItemProxy */ = {
+		5E9242422FC01C0600019387 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5ECFA6722FB24A1300AFE340 /* Project object */;
 			proxyType = 1;
@@ -28,6 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				5E92423F2FC01BBA00019387 /* Tab Enumerator Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,9 +41,9 @@
 		5E2BE76D2FB42E260033025C /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		5E694F3B2FC0154700457DD7 /* Tab Enumerator Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tab Enumerator Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E88FF462FC00C5D00C88BDB /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = SOURCE_ROOT; };
+		5E9242092FC018F000019387 /* Tab Enumerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tab Enumerator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA6B4E12FB3CE7C00468175 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		5EA6B4E42FB3D22000468175 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
-		5ECFA67A2FB24A1300AFE340 /* Tab Enumerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Tab Enumerator.app"; path = "/Users/logansavage/Documents/Programming/Swift/Tab Enumerator/build/Debug/Tab Enumerator.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -107,6 +110,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E92423E2FC01BBA00019387 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5EA6B4E02FB3CE6400468175 /* Project Information */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,15 @@
 			path = "Project Information";
 			sourceTree = "<group>";
 		};
+		5EC86DF72FC0202900561F41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E9242092FC018F000019387 /* Tab Enumerator.app */,
+				5E694F3B2FC0154700457DD7 /* Tab Enumerator Extension.appex */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
 		5ECFA6712FB24A1300AFE340 = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +144,8 @@
 				5EA6B4E02FB3CE6400468175 /* Project Information */,
 				5ECFA67C2FB24A1300AFE340 /* Tab Enumerator */,
 				5ECFA6AE2FB24A1400AFE340 /* Tab Enumerator Extension */,
-				5E694F3B2FC0154700457DD7 /* Tab Enumerator Extension.appex */,
+				5E92423E2FC01BBA00019387 /* Frameworks */,
+				5EC86DF72FC0202900561F41 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,7 +164,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				5ECFA6AD2FB24A1400AFE340 /* PBXTargetDependency */,
+				5E9242432FC01C0600019387 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				5EA6B2852FB3AB9A00468175 /* Chrome Extension */,
@@ -154,7 +174,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Tab Enumerator";
-			productReference = 5ECFA67A2FB24A1300AFE340 /* Tab Enumerator.app */;
+			productReference = 5E9242092FC018F000019387 /* Tab Enumerator.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5ECFA6A92FB24A1400AFE340 /* Tab Enumerator Extension */ = {
@@ -207,7 +227,6 @@
 			mainGroup = 5ECFA6712FB24A1300AFE340;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 5ECFA6712FB24A1300AFE340;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -222,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC899162FC023FE0017BBAC /* Tab Enumerator Extension.appex in Resources */,
 				5E2BE76F2FB42E260033025C /* AppIcon.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,10 +274,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5ECFA6AD2FB24A1400AFE340 /* PBXTargetDependency */ = {
+		5E9242432FC01C0600019387 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5ECFA6A92FB24A1400AFE340 /* Tab Enumerator Extension */;
-			targetProxy = 5ECFA6AC2FB24A1400AFE340 /* PBXContainerItemProxy */;
+			targetProxy = 5E9242422FC01C0600019387 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
