@@ -88,3 +88,7 @@ form fieldset {
         -webkit-user-select: none;
         user-select: none;
     }
+
+.disabled {
+    opacity: 50%;
+}

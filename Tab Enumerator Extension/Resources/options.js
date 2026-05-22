@@ -1,3 +1,9 @@
+const isSafari = navigator.vendor &&
+    navigator.vendor.indexOf('Apple') > -1 &&
+    navigator.userAgent &&
+    navigator.userAgent.indexOf('CriOS') == -1 &&
+    navigator.userAgent.indexOf('FxiOS') == -1;
+
 function jsonifyForm(id) {
     const $formInputs = document.querySelectorAll(`form#${id} input:not([type='submit'])`);
 
@@ -68,3 +74,19 @@ loadSettingsAsync().then(() => {
     document.getElementById('settings-form-load')
         .setAttribute('hidden', 'hidden');
 });
+
+if (isSafari) {
+    for (const elem of document.getElementsByClassName('not-safari')) {
+        elem.remove();
+    }
+    for (const elem of document.getElementsByClassName('safari-only')) {
+        elem.removeAttribute('hidden');
+    }
+} else {
+    for (const elem of document.getElementsByClassName('safari-only')) {
+        elem.remove();
+    }
+    for (const elem of document.getElementsByClassName('not-safari')) {
+        elem.removeAttribute('hidden');
+    }
+}

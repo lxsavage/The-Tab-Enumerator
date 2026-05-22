@@ -29,7 +29,26 @@
                                 &#9432;
                             </span>
                         </label>
-
+                        <div class="not-safari" hidden>
+                            <label>
+                                <input type="checkbox" name="favicon-numbers" />
+                                Show numbers in favicons
+                                <span title="Instead of prefixing page titles, change the favicons of pages to correspond to the tab numbers">
+                                    &#9432;
+                                </span>
+                            </label>
+                        </div>
+                        <div class="safari-only" hidden>
+                            <label>
+                                <input type="checkbox" disabled />
+                                <span class="disabled">
+                                    Show numbers in favicons
+                                </span>
+                                <span title="This feature is not available in Safari due to how it caches favicons">
+                                    &#9432;
+                                </span>
+                            </label>
+                        </div>
                     </fieldset>
                     <div class="right">
                         <input type="submit" value="Save changes" />

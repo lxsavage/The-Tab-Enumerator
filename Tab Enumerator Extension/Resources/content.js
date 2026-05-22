@@ -9,32 +9,36 @@ const isSafari = navigator.vendor &&
     navigator.userAgent.indexOf('CriOS') == -1 &&
     navigator.userAgent.indexOf('FxiOS') == -1;
 
-// Keep track of if the original state of the title/favicons on the page are
-// stored in origTitle/origFaviconLinks for restoring in the future
-let loadedOriginalState = false;
 
 ////////////////////////////////////////////////////////////////////////////////
 // Set tab state implementations
 ////////////////////////////////////////////////////////////////////////////////
-let origTitle = '';
 
-function setTabTitlePrefix(_, tabNum) {
-    if (!loadedOriginalState)
+// Keep track of if the original state of the title/favicons on the page are
+// stored in origTitle/origFaviconLinks for restoring in the future
+let loadedOriginalTitle = false;
+let loadedOriginalFavicons = false;
+
+let origTitle = '';
+const origFaviconLinks = [];
+
+function setTabTitlePrefix(tabNum) {
+    if (!loadedOriginalTitle)
         origTitle = document.title;
 
-    loadedOriginalState = true;
+    loadedOriginalTitle = true;
     document.title = `[${tabNum}] ${origTitle}`;
 }
 
-function setTabFavicon(resource, tabNum) {
+function setTabFavicon(resource) {
     for (const favicon of document.querySelectorAll("link[rel*='icon']")) {
-        if (!loadedOriginalState)
+        if (!loadedOriginalFavicons)
             origFaviconLinks.push(favicon.cloneNode(true));
 
         favicon.remove();
     }
 
-    loadedOriginalState = true;
+    loadedOriginalFavicons = true;
 
     const link = document.createElement('link');
     link.type = 'image/png';
@@ -43,22 +47,18 @@ function setTabFavicon(resource, tabNum) {
     document.head.appendChild(link);
 }
 
-// SHIM: prefix title instead of change favicon for Safari to work around its aggressive favicon caching
-const setTab = isSafari ? setTabTitlePrefix : setTabFavicon;
-
 ////////////////////////////////////////////////////////////////////////////////
 // Restore tab state implementations
 ////////////////////////////////////////////////////////////////////////////////
-const origFaviconLinks = [];
-
 function restoreTabTitlePrefix() {
-    if (!loadedOriginalState) return;
+    if (!loadedOriginalTitle) return;
 
     document.title = origTitle;
+    loadedOriginalTitle = false;
 }
 
 function restoreTabFavicon() {
-    if (!loadedOriginalState) return;
+    if (!loadedOriginalFavicons) return;
 
     for (const link of document.querySelectorAll("link[rel*='icon']")) {
         link.remove();
@@ -68,9 +68,6 @@ function restoreTabFavicon() {
         document.head.appendChild(link);
     }
 }
-
-// SHIM: prefix title instead of change favicon for Safari to work around its aggressive favicon caching
-const restoreTab = isSafari ? restoreTabTitlePrefix : restoreTabFavicon;
 
 ////////////////////////////////////////////////////////////////////////////////
 // Event handlers
@@ -102,10 +99,18 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log('recv', request);
     switch (request.command) {
         case 'set-favicon':
-            setTab(request.path, request.number);
+            if (isSafari || request.forceTitleMode) {
+                setTabTitlePrefix(request.number);
+            } else {
+                setTabFavicon(request.resource);
+            }
             break;
         case 'restore-favicon':
-            restoreTab();
+            if (isSafari || request.forceTitleMode) {
+                restoreTabTitlePrefix();
+            } else {
+                restoreTabFavicon();
+            }
             break;
         default:
             console.error('[Tab Enumerator] unhandled event: ', request.command);

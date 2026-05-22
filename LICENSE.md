@@ -1,5 +1,7 @@
 # PolyForm Shield License 1.0.0
 
+**Required Notice:** Copyright (c) 2026 Logan Savage. All Rights Reserved.
+
 <https://polyformproject.org/licenses/shield/1.0.0>
 
 ## Acceptance

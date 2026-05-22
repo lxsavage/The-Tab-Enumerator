@@ -25,7 +25,9 @@ function getNumberIconPath(number) {
 }
 
 async function handleSetFavicon() {
-    const forceLastAs9 = (await chrome.storage.sync.get('lasttab-9'))['lasttab-9'];
+    const settings = await chrome.storage.sync.get(['lasttab-9', 'favicon-numbers']);
+    const forceLastAs9 = settings['lasttab-9'];
+    const forceTitleMode = !settings['favicon-numbers'];
     const tabs = await chrome.tabs.query({ currentWindow: true });
     for (const tab of tabs) {
         if (isRestrictedUrl(tab.url)) continue;
@@ -38,14 +40,13 @@ async function handleSetFavicon() {
             number = 9;
         }
 
-        // Safari does not use the number favicons, so retrieving them is unnecessary
-        const path = isSafari ? '' : getNumberIconPath(number);
-
+        const resource = (isSafari || forceTitleMode) ? '' : getNumberIconPath(number);
         try {
             await chrome.tabs.sendMessage(tab.id, {
                 command: 'set-favicon',
-                path,
-                number
+                resource,
+                number,
+                forceTitleMode
             });
         } catch (ex) {
             log(`tab ${tab.id} not ready: ` + ex.message.toString());
@@ -54,12 +55,14 @@ async function handleSetFavicon() {
 }
 
 async function handleRestoreFavicon() {
+    const forceTitleMode = !(await chrome.storage.sync.get('favicon-numbers'))['favicon-numbers'];
     const tabs = await chrome.tabs.query({ currentWindow: true });
     for (const tab of tabs) {
-        if (tab.index >= 8 && tab.index !== tabs.length - 1) continue;
-
         try {
-            await chrome.tabs.sendMessage(tab.id, { command: 'restore-favicon' });
+            await chrome.tabs.sendMessage(tab.id, {
+                command: 'restore-favicon',
+                forceTitleMode
+            });
         } catch (ex) {
             log(`tab ${tab.id} not ready:` + ex.message.toString());
         }
@@ -89,7 +92,8 @@ chrome.runtime.onInstalled.addListener(async details => {
     if (details.reason === 'install') {
         // Set default settings for first install
         await chrome.storage.sync.set({
-            'lasttab-9': true
+            'lasttab-9': true,
+            'favicon-numbers': !isSafari
         });
     }
 
