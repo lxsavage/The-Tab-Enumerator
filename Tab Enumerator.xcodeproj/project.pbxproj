@@ -121,11 +121,11 @@
 		5ECFA6712FB24A1300AFE340 = {
 			isa = PBXGroup;
 			children = (
-				5EA6B4E02FB3CE6400468175 /* Project Information */,
 				5EA6B2852FB3AB9A00468175 /* Chrome Extension */,
+				5ECFA67B2FB24A1300AFE340 /* Products */,
+				5EA6B4E02FB3CE6400468175 /* Project Information */,
 				5ECFA67C2FB24A1300AFE340 /* Tab Enumerator */,
 				5ECFA6AE2FB24A1400AFE340 /* Tab Enumerator Extension */,
-				5ECFA67B2FB24A1300AFE340 /* Products */,
 			);
 			sourceTree = "<group>";
 		};

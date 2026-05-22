@@ -99,6 +99,7 @@ document.addEventListener('visibilitychange', () => {
 })
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    console.log('recv', request);
     switch (request.command) {
         case 'set-favicon':
             setTab(request.path, request.number);

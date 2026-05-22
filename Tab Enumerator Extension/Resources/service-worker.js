@@ -25,16 +25,21 @@ function getNumberIconPath(number) {
 }
 
 async function handleSetFavicon() {
+    const forceLastAs9 = (await chrome.storage.sync.get('lasttab-9'))['lasttab-9'];
     const tabs = await chrome.tabs.query({ currentWindow: true });
     for (const tab of tabs) {
         if (isRestrictedUrl(tab.url)) continue;
         if (tab.index >= 8 && tab.index !== tabs.length - 1) continue;
 
+        let number = tab.index + 1;
+        if (forceLastAs9 && tab.index === tabs.length - 1) {
+            // lasttab-9: ensure that the last tab is always denoted with 9
+            // instead of what it would normally be if less than 9 tabs are open
+            number = 9;
+        }
+
         // Safari does not use the number favicons, so retrieving them is unnecessary
         const path = isSafari ? '' : getNumberIconPath(number);
-
-        // Last tab will always display 9
-        const number = (tab.index === tabs.length - 1) ? 9 : tab.index + 1;
 
         try {
             await chrome.tabs.sendMessage(tab.id, {
@@ -62,7 +67,7 @@ async function handleRestoreFavicon() {
 }
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-    log('recv: ' + msg);
+    log('recv: ' + JSON.stringify(msg));
     (async () => {
         switch (msg.command) {
             case 'set-favicon':
@@ -80,4 +85,13 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     return true;
 });
 
-chrome.runtime.onInstalled.addListener(() => log('installed'));
+chrome.runtime.onInstalled.addListener(async details => {
+    if (details.reason === 'install') {
+        // Set default settings for first install
+        await chrome.storage.sync.set({
+            'lasttab-9': true
+        });
+    }
+
+    log('installed');
+});

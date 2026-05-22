@@ -10,7 +10,7 @@
 # - 2: messages.json path (for name/description subs)
 #
 
-if ! command -v jq; then
+if ! command -v jq > /dev/null 2>&1; then
     echo "ERROR: jq not found on path; install this through your respective package manager and try again."
     exit 1
 fi

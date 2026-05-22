@@ -4,11 +4,25 @@
 
 body {
     font-family: system-ui;
-    background-color: gray;
+}
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: gray;
+    }
+    .content {
+        background-color: whitesmoke;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #141218;
+    }
+    .content {
+        background-color: #1d1b20;
+    }
 }
 
 .content {
-    background-color: whitesmoke;
     height: 100vh;
     max-width: 600px;
     box-shadow: 2px 1px 10px black;

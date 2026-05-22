@@ -40,5 +40,8 @@
         "default_popup": "popup.html",
         "default_icon": "images/icon-32.png"
     },
-    "permissions": ["storage"]
+    "permissions": [
+        "storage",
+        "tabs"
+    ]
 }
