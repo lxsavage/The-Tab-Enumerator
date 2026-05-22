@@ -36,11 +36,11 @@
 
 /* Begin PBXFileReference section */
 		5E2BE76D2FB42E260033025C /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		5E694F3B2FC0154700457DD7 /* Tab Enumerator Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tab Enumerator Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E88FF462FC00C5D00C88BDB /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = SOURCE_ROOT; };
 		5EA6B4E12FB3CE7C00468175 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		5EA6B4E42FB3D22000468175 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		5ECFA67A2FB24A1300AFE340 /* Tab Enumerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Tab Enumerator.app"; path = "/Users/logansavage/Documents/Programming/Swift/Tab Enumerator/build/Debug/Tab Enumerator.app"; sourceTree = "<absolute>"; };
-		5ECFA6AA2FB24A1400AFE340 /* Tab Enumerator Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; name = "Tab Enumerator Extension.appex"; path = "/Users/logansavage/Documents/Programming/Swift/Tab Enumerator/build/Debug/Tab Enumerator Extension.appex"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -125,6 +125,7 @@
 				5EA6B4E02FB3CE6400468175 /* Project Information */,
 				5ECFA67C2FB24A1300AFE340 /* Tab Enumerator */,
 				5ECFA6AE2FB24A1400AFE340 /* Tab Enumerator Extension */,
+				5E694F3B2FC0154700457DD7 /* Tab Enumerator Extension.appex */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,7 +176,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Tab Enumerator Extension";
-			productReference = 5ECFA6AA2FB24A1400AFE340 /* Tab Enumerator Extension.appex */;
+			productReference = 5E694F3B2FC0154700457DD7 /* Tab Enumerator Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -290,7 +291,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.2.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -335,7 +336,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 0.2.1;
+				MARKETING_VERSION = 0.2.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
