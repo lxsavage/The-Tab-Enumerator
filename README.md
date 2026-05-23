@@ -1,4 +1,6 @@
-![App Icon](/Tab%20Enumerator%20Extension/Resources/images/icon-128.png)
+<p align="center">
+    <img src="Tab Enumerator Extension/Resources/images/icon-128.png" width="128" height="128"/>
+</p>
 
 # The Tab Enumerator
 
