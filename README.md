@@ -2,15 +2,19 @@
 
 # The Tab Enumerator
 
+Number your tabs for quick keyboard navigation.
+
+[![GitHub Release](https://img.shields.io/github/v/release/lxsavage/The-Tab-Enumerator)](https://github.com/lxsavage/The-Tab-Enumerator/releases/latest)
+
 ## Background
 
 Most modern web browsers provide a keyboard shortcut for `CTRL/CMD + #`, where
 `#` is a number from 1 through 9, which will change the tab to the specified tab
 index, except for 9, which will point to the last tab. This shortcut is very
 useful for speeding up tab switching, but runs into one significant issue: no
-numbers are displayed, so to determine which number to press is either a guessing
-game, or one would have to count out the tabs from the left, negating any benefit
-the shortcut had.
+numbers are displayed, so to determine which number to press is either a
+guessing game, memorization, or one would have to count out the tabs from the
+left/right.
 
 ## What does this extension do?
 
