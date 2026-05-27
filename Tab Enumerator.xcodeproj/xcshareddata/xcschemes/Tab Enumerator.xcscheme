@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5ECFA6792FB24A1300AFE340"
-               BuildableName = "Tab Enumerator.app"
-               BlueprintName = "Tab Enumerator"
+               BuildableName = "The Tab Enumerator.app"
+               BlueprintName = "The Tab Enumerator"
                ReferencedContainer = "container:Tab Enumerator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -55,8 +55,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5ECFA6792FB24A1300AFE340"
-            BuildableName = "Tab Enumerator.app"
-            BlueprintName = "Tab Enumerator"
+            BuildableName = "The Tab Enumerator.app"
+            BlueprintName = "The Tab Enumerator"
             ReferencedContainer = "container:Tab Enumerator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -72,8 +72,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5ECFA6792FB24A1300AFE340"
-            BuildableName = "Tab Enumerator.app"
-            BlueprintName = "Tab Enumerator"
+            BuildableName = "The Tab Enumerator.app"
+            BlueprintName = "The Tab Enumerator"
             ReferencedContainer = "container:Tab Enumerator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -168,3 +168,9 @@ chrome.runtime.onMessage.addListener(async (request, _, sendResponse) => {
 
     sendResponse(true);
 });
+
+// HOTFIX: opening a new tab causes the tab numbers to lock "on" until CMD/CTRL
+// is pressed again
+document.addEventListener("DOMContentLoaded", () => {
+    chrome.runtime.sendMessage({ command: "restore-favicon" });
+});

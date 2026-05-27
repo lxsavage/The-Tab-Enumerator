@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5ECFA6A92FB24A1400AFE340"
-               BuildableName = "Tab Enumerator Extension.appex"
-               BlueprintName = "Tab Enumerator Extension"
+               BuildableName = "The Tab Enumerator Extension.appex"
+               BlueprintName = "The Tab Enumerator Extension"
                ReferencedContainer = "container:Tab Enumerator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -31,8 +31,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5ECFA6792FB24A1300AFE340"
-               BuildableName = "Tab Enumerator.app"
-               BlueprintName = "Tab Enumerator"
+               BuildableName = "The Tab Enumerator.app"
+               BlueprintName = "The Tab Enumerator"
                ReferencedContainer = "container:Tab Enumerator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -63,8 +63,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5ECFA6792FB24A1300AFE340"
-            BuildableName = "Tab Enumerator.app"
-            BlueprintName = "Tab Enumerator"
+            BuildableName = "The Tab Enumerator.app"
+            BlueprintName = "The Tab Enumerator"
             ReferencedContainer = "container:Tab Enumerator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -82,8 +82,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5ECFA6792FB24A1300AFE340"
-            BuildableName = "Tab Enumerator.app"
-            BlueprintName = "Tab Enumerator"
+            BuildableName = "The Tab Enumerator.app"
+            BlueprintName = "The Tab Enumerator"
             ReferencedContainer = "container:Tab Enumerator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
