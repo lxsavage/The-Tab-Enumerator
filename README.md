@@ -30,20 +30,20 @@ This extension is not currently published on any extension marketplaces, so it
 needs to be manually built or pulled from releases and installed into your
 browser of choice.
 
-If using the Chrome release archive, you can follow the Manifest V3 browser
-[build instructions](#manifest-v3-browsers-chrome-firefox-c) below, skipping the
-first step.
+If using the Chrome release archive, you can follow the 
+[Manifest V3 browser build instructions](#manifest-v3-browsers-chrome-firefox-c)
+below, skipping the first step.
 
 If using the Safari release bundle, note that it is not signed and the following
 will need to be done to get it to run:
 
 1. Attempt to run it once and see a message stating that it's refusing to open
    due to being unsigned
-2. Go into System Settings>Privacy & Security and look for a warning about the
+2. Go into `System Settings>Privacy & Security` and look for a warning about the
    application at the bottom
 3. Allow it to run, it will need an admin password for this to be done
-4. Rerun the app bundle and proceed as normal from step 7 of the Safari
-   [build instructions](#safari). 
+4. Rerun the app bundle and proceed as normal from step 7 of the
+   [Safari build instructions](#safari). 
 
 ## Build
 
@@ -60,7 +60,7 @@ will need to be done to get it to run:
 ### Safari
 
 1. Open the XCode project
-2. Create a product archive (Product>Archive)
+2. Create a product archive (`Product>Archive`)
 3. Select the newly-created archive and select "Distribute App" on the right
    navigation pane
 4. Select the "Custom" distribution method
