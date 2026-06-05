@@ -326,7 +326,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.logansavage.tabenumerator.devel.extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.logansavage.TabEnumerator.devel.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -547,7 +547,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.logansavage.tabenumerator.devel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.logansavage.TabEnumerator.devel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -600,7 +600,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.logansavage.tabenumerator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.logansavage.TabEnumerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
