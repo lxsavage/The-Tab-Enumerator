@@ -19,14 +19,12 @@ if (!chrome && browser) chrome = browser;
 
 async function getFallbackTabFaviconUrl() {
     const res = await fetch("/favicon.ico");
-    if (res.status !== 200) {
-        throw new Error(
-            "Icon not accessible: returned status code " + res.status,
-        );
+    if (!res.ok) {
+        throw new Error(res.status);
     }
 
     const mimeType = res.headers.get("Content-Type");
-    if (!mimeType.startsWith("image/")) {
+    if (!mimeType?.startsWith("image/")) {
         throw new Error(
             `Icon is not an image according to its MIME type of "${mimeType}"`,
         );
@@ -78,7 +76,9 @@ async function setTabFavicon(resource) {
             faviconShim.href = faviconCandidate;
             origFaviconLinks.push(faviconShim);
         } catch (ex) {
-            console.error(ex);
+            if (!ex?.message?.includes("404")) {
+                console.error(ex);
+            }
             return;
         }
     }
