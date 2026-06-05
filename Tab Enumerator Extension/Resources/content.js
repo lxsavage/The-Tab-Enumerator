@@ -17,9 +17,15 @@ if (!chrome && browser) chrome = browser;
 // Helper utilities
 ////////////////////////////////////////////////////////////////////////////////
 
+// HOTFIX: prevent pollution of console in the case of the favicon not being
+// accessible
+let fallbackFaviconAccessible = true;
 async function getFallbackTabFaviconUrl() {
+    if (!fallbackFaviconAccessible) throw new Error("404");
+
     const res = await fetch("/favicon.ico");
     if (!res.ok) {
+        fallbackFaviconAccessible = false;
         throw new Error(res.status);
     }
 
