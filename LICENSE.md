@@ -1,6 +1,7 @@
 # PolyForm Shield License 1.0.0
 
 **Required Notice:** Copyright (c) 2026 Logan Savage. All Rights Reserved.
+
 **Required Notice:** Number icons created by Hight Quality Icons - Flaticon
 
 <https://polyformproject.org/licenses/shield/1.0.0>
