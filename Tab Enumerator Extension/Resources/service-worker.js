@@ -43,6 +43,8 @@ async function handleSetFavicon() {
     const forceLastAs9 = settings["lasttab-9"];
     const forceTitleMode = !settings["favicon-numbers"];
     const tabs = await chrome.tabs.query({ currentWindow: true });
+
+    const tabSignals = [];
     for (const tab of tabs) {
         if (isRestrictedUrl(tab.url)) continue;
         if (tab.index >= 8 && tab.index !== tabs.length - 1) continue;
@@ -56,16 +58,21 @@ async function handleSetFavicon() {
 
         const resource =
             isSafari || forceTitleMode ? "" : getNumberIconPath(number);
-        try {
-            await chrome.tabs.sendMessage(tab.id, {
+
+        const p = chrome.tabs
+            .sendMessage(tab.id, {
                 command: "set-favicon",
                 resource,
                 number,
                 forceTitleMode,
-            });
-        } catch (ex) {
-            log(`tab ${tab.id} not ready: ` + ex.message.toString());
-        }
+            })
+            .catch((ex) => log(`tab ${tab.id} not ready: ${ex.message}`));
+
+        tabSignals.push(p);
+    }
+
+    if (tabSignals.length > 0) {
+        await Promise.allSettled(tabSignals);
     }
 }
 
@@ -74,15 +81,20 @@ async function handleRestoreFavicon() {
         "favicon-numbers"
     ];
     const tabs = await chrome.tabs.query({ currentWindow: true });
+
+    const tabSignals = [];
     for (const tab of tabs) {
-        try {
-            await chrome.tabs.sendMessage(tab.id, {
+        const p = chrome.tabs
+            .sendMessage(tab.id, {
                 command: "restore-favicon",
                 forceTitleMode,
-            });
-        } catch (ex) {
-            log(`tab ${tab.id} not ready:` + ex.message.toString());
-        }
+            })
+            .catch((ex) => log(`tab ${tab.id} not ready: ${ex}`));
+        tabSignals.push(p);
+    }
+
+    if (tabSignals.length > 0) {
+        await Promise.allSettled(tabSignals);
     }
 }
 
