@@ -49,6 +49,11 @@ async function loadSettingsAsync() {
         );
 
         for (const $input of $formInputs) {
+            $input.addEventListener("change", (_) => {
+                $reset.removeAttribute("disabled");
+                $submit.removeAttribute("disabled");
+            });
+
             if (!($input.name in settings)) continue;
 
             if ($input.type === "checkbox") {
@@ -56,11 +61,6 @@ async function loadSettingsAsync() {
             } else {
                 $input.value = settings[$input.name];
             }
-
-            $input.addEventListener("change", (_) => {
-                $reset.removeAttribute("disabled");
-                $submit.removeAttribute("disabled");
-            });
         }
     } catch (ex) {
         console.error(
@@ -81,7 +81,9 @@ async function syncSettingsAsync() {
     }
 }
 
-loadSettingsAsync().then(() => {
+document.addEventListener("DOMContentLoaded", async () => {
+    await loadSettingsAsync();
+
     const $form = document.getElementById("settings-form");
     const $reset = document.getElementById("settings-form-reset");
     const $submit = document.querySelector(
@@ -109,23 +111,24 @@ loadSettingsAsync().then(() => {
         .getElementById("settings-form-load")
         .setAttribute("hidden", "hidden");
 
-    $form.removeAttribute("hidden");
     $reset.setAttribute("disabled", "disabled");
     $submit.setAttribute("disabled", "disabled");
-});
 
-if (isSafari) {
-    for (const elem of document.getElementsByClassName("not-safari")) {
-        elem.remove();
+    if (isSafari) {
+        for (const elem of document.getElementsByClassName("not-safari")) {
+            elem.remove();
+        }
+        for (const elem of document.getElementsByClassName("safari-only")) {
+            elem.removeAttribute("hidden");
+        }
+    } else {
+        for (const elem of document.getElementsByClassName("safari-only")) {
+            elem.remove();
+        }
+        for (const elem of document.getElementsByClassName("not-safari")) {
+            elem.removeAttribute("hidden");
+        }
     }
-    for (const elem of document.getElementsByClassName("safari-only")) {
-        elem.removeAttribute("hidden");
-    }
-} else {
-    for (const elem of document.getElementsByClassName("safari-only")) {
-        elem.remove();
-    }
-    for (const elem of document.getElementsByClassName("not-safari")) {
-        elem.removeAttribute("hidden");
-    }
-}
+
+    $form.removeAttribute("hidden");
+});

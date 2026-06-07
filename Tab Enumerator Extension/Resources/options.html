@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
         <meta charset="UTF-8" />
@@ -9,23 +9,30 @@
     <body>
         <div class="content">
             <header>
-                <img src="images/icon-512.png" width="128" height="128" alt="Tab Enumerator Icon" />
+                <img
+                    src="images/icon-512.png"
+                    width="128"
+                    height="128"
+                    alt="Tab Enumerator Icon"
+                />
                 <h2>Settings for The Tab Enumerator</h2>
             </header>
             <content>
                 <noscript>
-                    <p class="danger">JavaScript is required for this page to work!</p>
+                    <p class="danger">
+                        JavaScript is required for this page to work!
+                    </p>
                 </noscript>
-                <p id="settings-form-load">
-                    Loading...
-                </p>
+                <p id="settings-form-load">Loading...</p>
                 <form id="settings-form" hidden>
                     <fieldset>
                         <legend>Appearance</legend>
                         <label>
-                            <input type="checkbox" name="lasttab-9"/></input>
+                            <input type="checkbox" name="lasttab-9" />
                             Last tab should always be [9].
-                            <span title="If this is enabled, the last tab will always be numbered [9] (i.e., if you have 2 tabs, they will be numbered [1] and [9])">
+                            <span
+                                title="If this is enabled, the last tab will always be numbered [9] (i.e., if you have 2 tabs, they will be numbered [1] and [9])"
+                            >
                                 &#9432;
                             </span>
                         </label>
@@ -33,7 +40,9 @@
                             <label>
                                 <input type="checkbox" name="favicon-numbers" />
                                 Show numbers in favicons
-                                <span title="Instead of prefixing page titles, change the favicons of pages to correspond to the tab numbers">
+                                <span
+                                    title="Instead of prefixing page titles, change the favicons of pages to correspond to the tab numbers"
+                                >
                                     &#9432;
                                 </span>
                             </label>
@@ -44,14 +53,59 @@
                                 <span class="disabled">
                                     Show numbers in favicons
                                 </span>
-                                <span title="This feature is not available in Safari due to how it caches favicons">
+                                <span
+                                    title="This feature is not available in Safari due to how it caches favicons"
+                                >
+                                    &#9432;
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <br />
+                    <!-- Added in but not being used yet -->
+                    <fieldset hidden>
+                        <legend>
+                            Experiments
+                            <span
+                                title="Incomplete or unrefined settings not ready for normal use"
+                            >
+                                &#9432;
+                            </span>
+                        </legend>
+                        <div class="not-safari" hidden>
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="exp-contentcache"
+                                />
+                                Speed up favicon switching
+                                <span
+                                    title="Add number favicon caching on the page-side to speed up favicon switching. May cause number jumping when tabs are reordered!"
+                                >
+                                    &#9432;
+                                </span>
+                            </label>
+                        </div>
+                        <div class="safari-only" fhidden>
+                            <label>
+                                <input type="checkbox" disabled />
+                                <span class="disabled">
+                                    Speed up favicon switching
+                                </span>
+                                <span
+                                    title="This feature is not available in Safari due to not being able to use numbered favicons"
+                                >
                                     &#9432;
                                 </span>
                             </label>
                         </div>
                     </fieldset>
                     <div class="right">
-                        <input type="button" value="Reset" id="settings-form-reset" />
+                        <input
+                            type="button"
+                            value="Reset"
+                            id="settings-form-reset"
+                        />
                         <input type="submit" value="Save changes" />
                     </div>
                 </form>
