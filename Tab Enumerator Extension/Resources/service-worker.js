@@ -9,10 +9,6 @@ const isSafari =
 // Helper utilities
 ////////////////////////////////////////////////////////////////////////////////
 
-function log(msg) {
-    console.log("[Tab Enumerator; worker] ", msg);
-}
-
 function isRestrictedUrl(url) {
     return (
         !url ||
@@ -66,7 +62,9 @@ async function handleSetFavicon() {
                 number,
                 forceTitleMode,
             })
-            .catch((ex) => log(`tab ${tab.id} not ready: ${ex.message}`));
+            .catch((ex) =>
+                console.log(`tab ${tab.id} not ready: ${ex.message}`),
+            );
 
         tabSignals.push(p);
     }
@@ -89,7 +87,7 @@ async function handleRestoreFavicon() {
                 command: "restore-favicon",
                 forceTitleMode,
             })
-            .catch((ex) => log(`tab ${tab.id} not ready: ${ex}`));
+            .catch((ex) => console.log(`tab ${tab.id} not ready: ${ex}`));
         tabSignals.push(p);
     }
 
@@ -102,8 +100,8 @@ async function handleRestoreFavicon() {
 // Event listeners
 ////////////////////////////////////////////////////////////////////////////////
 
-chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-    log("recv: " + JSON.stringify(msg));
+chrome.runtime.onMessage.addListener((msg, _, sendResponse) => {
+    console.debug("recv: " + JSON.stringify(msg));
     (async () => {
         switch (msg.command) {
             case "set-favicon":
@@ -113,7 +111,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
                 await handleRestoreFavicon();
                 break;
             default:
-                log("unhandled command:", msg.command);
+                console.error("unhandled command:", msg.command);
         }
         sendResponse(true);
     })();
@@ -130,5 +128,5 @@ chrome.runtime.onInstalled.addListener(async (details) => {
         });
     }
 
-    log("installed");
+    console.log("installed");
 });

@@ -62,8 +62,7 @@
                         </div>
                     </fieldset>
                     <br />
-                    <!-- Added in but not being used yet -->
-                    <fieldset hidden>
+                    <fieldset>
                         <legend>
                             Experiments
                             <span
@@ -74,23 +73,20 @@
                         </legend>
                         <div class="not-safari" hidden>
                             <label>
-                                <input
-                                    type="checkbox"
-                                    name="exp-contentcache"
-                                />
-                                Speed up favicon switching
+                                <input type="checkbox" name="exp-refswap" />
+                                Use favicon reference swapping
                                 <span
-                                    title="Add number favicon caching on the page-side to speed up favicon switching. May cause number jumping when tabs are reordered!"
+                                    title="Instead of removing and replacing DOM elements for favicons, change the existing DOM element icon references. This reduces DOM thrashing, which can in some cases help page performance"
                                 >
                                     &#9432;
                                 </span>
                             </label>
                         </div>
-                        <div class="safari-only" fhidden>
+                        <div class="safari-only" hidden>
                             <label>
                                 <input type="checkbox" disabled />
                                 <span class="disabled">
-                                    Speed up favicon switching
+                                    Use favicon reference swapping
                                 </span>
                                 <span
                                     title="This feature is not available in Safari due to not being able to use numbered favicons"
