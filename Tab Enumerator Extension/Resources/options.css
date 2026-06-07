@@ -1,5 +1,17 @@
 :root {
     color-scheme: light dark;
+
+    --btn-background: hsl(235.38, 81.25%, 68.63%);
+    --btn-border: var(--btn-background);
+    --btn-text: white;
+
+    --btn-hover-background: white;
+    --btn-hover-border: hsl(235.38, 81.25%, 68.63%);
+    --btn-hover-text: black;
+
+    --btn-active-background: white;
+    --btn-active-border: hsl(235.38, 81.25%, 88.63%);
+    --btn-active-text: hsl(0, 0%, 60%);
 }
 
 body {
@@ -54,6 +66,7 @@ div.right {
     justify-content: right;
 }
 
+input[type="button"],
 input[type="submit"] {
     margin-right: 10px;
     margin-top: 10px;
@@ -62,22 +75,32 @@ input[type="submit"] {
     padding: 5px;
     border-radius: 8px;
     padding: 5px 13px;
-    border: 2px solid hsl(235.38, 81.25%, 68.63%);
-    background-color: hsl(235.38, 81.25%, 68.63%);
+    border: 2px solid var(--btn-border);
+    background-color: var(--btn-background);
     font-size: 14px;
-    color: white;
+    color: var(--btn-text);
     cursor: pointer;
-}
-input[type="submit"]:hover {
-    border: 2px solid hsl(235.38, 81.25%, 68.63%);
-    background-color: whitesmoke;
-    color: black;
     transition-duration: 100ms;
 }
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    border: 2px solid var(--btn-hover-border);
+    background-color: var(--btn-hover-background);
+    color: var(--btn-hover-text);
+}
+input[type="button"]:active,
 input[type="submit"]:active {
-    border: 2px solid hsl(235.38, 81.25%, 88.63%);
-    color: hsl(0, 0%, 60%);
+    border: 2px solid var(--btn-active-border);
+    background-color: var(--btn-active-background);
+    color: var(--btn-active-text);
     transition-duration: 50ms;
+}
+input[type="button"]:disabled,
+input[type="submit"]:disabled {
+    border: 2px solid hsl(from var(--btn-border) h 0% l);
+    background-color: hsl(from var(--btn-background) h 0% l);
+    color: hsl(from var(--btn-text) h 0% l);
+    cursor: default;
 }
 
 form fieldset {
