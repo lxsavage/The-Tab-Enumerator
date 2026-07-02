@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="/Tab Enumerator Extension/Resources/images/icon-128.png" width="128" height="128"/>
+    <img src="https://raw.githubusercontent.com/lxsavage/The-Tab-Enumerator/main/Tab%20Enumerator%20Extension/Resources/images/icon-128.png" width="128" height="128"/>
 </p>
 
 # The Tab Enumerator
