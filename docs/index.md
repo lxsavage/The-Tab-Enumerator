@@ -7,7 +7,7 @@ or ⌘) so that you can quickly jump to a tab by number.
 
 ## Installation
 
-Chrome Webstore link TBD. Manual install instructions [here](https://github.com/lxsavage/The-Tab-Enumerator)
+Chrome Webstore link TBD. Manual install instructions [here](https://github.com/lxsavage/The-Tab-Enumerator#installation)
 
 ## Additional Information
 
