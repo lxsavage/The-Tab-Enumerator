@@ -1,6 +1,5 @@
 title: The Tab Enumerator
 description: A Chromium extension for numbering tabs
+logo: https://raw.githubusercontent.com/lxsavage/The-Tab-Enumerator/main/Tab%20Enumerator%20Extension/Resources/images/icon-128.png
 
-remote_theme: pages-themes/tactile@v0.2.0
-plugins:
-    - jekyll-remote-theme
+theme: jekyll-theme-minimal

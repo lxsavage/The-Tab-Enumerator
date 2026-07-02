@@ -1,9 +1,3 @@
-<p align="center">
-    <img src="https://raw.githubusercontent.com/lxsavage/The-Tab-Enumerator/main/Tab%20Enumerator%20Extension/Resources/images/icon-128.png" width="128" height="128"/>
-</p>
-
-# The Tab Enumerator
-
 Number your tabs for quick keyboard navigation.
 
 Do you regularly use ⌘+number/CTRL+number keyboard shortcuts in tab navigation,
