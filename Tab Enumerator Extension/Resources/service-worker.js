@@ -76,6 +76,7 @@ async function handleSetFavicon() {
     }
 
     if (numbersTimeoutEnabled) {
+        // numbers-timeout: ensure that the favicon numbers are restored after 2 seconds
         setTimeout(handleRestoreFavicon, 2000);
     }
 }
