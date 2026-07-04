@@ -35,9 +35,11 @@ async function handleSetFavicon() {
     const settings = await chrome.storage.sync.get([
         "lasttab-9",
         "favicon-numbers",
+        "numbers-timeout",
     ]);
     const forceLastAs9 = settings["lasttab-9"];
     const forceTitleMode = !settings["favicon-numbers"];
+    const numbersTimeoutEnabled = settings["numbers-timeout"];
     const tabs = await chrome.tabs.query({ currentWindow: true });
 
     const tabSignals = [];
@@ -71,6 +73,10 @@ async function handleSetFavicon() {
 
     if (tabSignals.length > 0) {
         await Promise.allSettled(tabSignals);
+    }
+
+    if (numbersTimeoutEnabled) {
+        setTimeout(handleRestoreFavicon, 2000);
     }
 }
 
@@ -124,6 +130,7 @@ chrome.runtime.onInstalled.addListener(async (details) => {
         // Set default settings for first install
         await chrome.storage.sync.set({
             "lasttab-9": true,
+            "numbers-timeout": false,
             "favicon-numbers": !isSafari,
         });
     }

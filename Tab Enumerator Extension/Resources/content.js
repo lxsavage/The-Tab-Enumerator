@@ -81,13 +81,11 @@ const FaviconManager = (() => {
         chrome.storage.onChanged.addListener((changes, area) => {
             if (area !== "sync") return;
 
-            // Not using guard clause here for future extensibility
+            // Experimental features
             if ("exp-refswap" in changes) {
                 const newVal = !!changes["exp-refswap"].newValue;
                 const oldVal = !!changes["exp-refswap"].oldValue;
                 featexp_refswap_enabled = newVal;
-
-                // console.log("Content cache enabled:", newVal);
 
                 if (oldVal && !newVal) {
                     try {

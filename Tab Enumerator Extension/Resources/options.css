@@ -104,13 +104,22 @@ input[type="submit"]:disabled {
 }
 
 form fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+
     border-radius: 12px;
     -webkit-user-select: none;
     user-select: none;
 }
 form fieldset label {
+    display: flex;
+
     -webkit-user-select: none;
     user-select: none;
+}
+form fieldset label span {
+    margin-left: 3px;
+    cursor: help;
 }
 
 .disabled {
