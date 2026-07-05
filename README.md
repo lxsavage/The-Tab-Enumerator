@@ -1,14 +1,17 @@
+
 <p align="center">
     <img src="Tab Enumerator Extension/Resources/images/icon-128.png" width="128" height="128"/>
 </p>
+
+[![GitHub Release](https://img.shields.io/github/v/release/lxsavage/The-Tab-Enumerator)](https://github.com/lxsavage/The-Tab-Enumerator/releases/latest)
+[![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/lxsavage/The-Tab-Enumerator)](https://github.com/lxsavage/The-Tab-Enumerator/issues)
+[![License](https://img.shields.io/badge/license-PolyForm%20Shield%201.0.0-red)](https://github.com/lxsavage/The-Tab-Enumerator/blob/main/LICENSE.md)
 
 # The Tab Enumerator
 
 Number your tabs for quick keyboard navigation.
 
-[![GitHub Release](https://img.shields.io/github/v/release/lxsavage/The-Tab-Enumerator)](https://github.com/lxsavage/The-Tab-Enumerator/releases/latest)
-
-## Background
+[![Chrome Webstore link](docs/assets/available-chrome-webstore-small-border.png)](https://chromewebstore.google.com/detail/the-tab-enumerator/mjcflllcdepcejfgmgmllholammlbbhj)
 
 Most modern web browsers provide a keyboard shortcut for `CTRL/CMD + #`, where
 `#` is a number from 1 through 9, which will change the tab to the specified tab
@@ -18,15 +21,11 @@ numbers are displayed, so to determine which number to press is either a
 guessing game, memorization, or one would have to count out the tabs from the
 left/right.
 
-## What does this extension do?
-
 This extension adds a binding where whenever the `CTRL/CMD` key is held down,
 it will display numbers in place of the favicons (or before the titles) of the
 tabs in the current window to denote which tab `CTRL/CMD + #` will switch to.
 
-## Installation
-
-[![Chrome Webstore link](docs/assets/available-chrome-webstore-small-border.png)](https://chromewebstore.google.com/detail/the-tab-enumerator/mjcflllcdepcejfgmgmllholammlbbhj)
+## Manual Installation
 
 > [!IMPORTANT]
 > There are currently no official Safari/Firefox extensions store extensions
@@ -50,6 +49,8 @@ will need to be done to get it to run:
 3. Allow it to run, it will need an admin password for this to be done
 4. Rerun the app bundle and proceed as normal from step 7 of the
    [Safari build instructions](#safari).
+
+## Background
 
 ## Build
 
