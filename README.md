@@ -26,11 +26,17 @@ tabs in the current window to denote which tab `CTRL/CMD + #` will switch to.
 
 ## Installation
 
-This extension is not currently published on any extension marketplaces, so it
-needs to be manually built or pulled from releases and installed into your
-browser of choice.
+[![Chrome Webstore link](docs/assets/available-chrome-webstore-small-border.png)](https://chromewebstore.google.com/detail/the-tab-enumerator/mjcflllcdepcejfgmgmllholammlbbhj)
 
-If using the Chrome release archive, you can follow the 
+> [!IMPORTANT]
+> There are currently no official Safari/Firefox extensions store extensions
+> published; these will need to be manually installed from either Releases or a
+> manual build following the instructions below. Firefox should mostly be able
+> to follow the same instructions for Chrome, since it's also supports loading
+> unpacked Manifest V3 extensions.
+
+If using the Chrome release archive (for Chromium/Firefox-based browsers), you
+can follow the
 [Manifest V3 browser build instructions](#manifest-v3-browsers-chrome-firefox-c)
 below, skipping the first step.
 
@@ -43,7 +49,7 @@ will need to be done to get it to run:
    application at the bottom
 3. Allow it to run, it will need an admin password for this to be done
 4. Rerun the app bundle and proceed as normal from step 7 of the
-   [Safari build instructions](#safari). 
+   [Safari build instructions](#safari).
 
 ## Build
 
