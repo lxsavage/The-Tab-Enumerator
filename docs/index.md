@@ -1,5 +1,5 @@
 <head>
-  <link rel="icon" type="image/png" href="/Tab%20Enumerator%20Extension/Resources/images/icon-32.png" />
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/lxsavage/The-Tab-Enumerator/main/Tab%20Enumerator%20Extension/Resources/images/icon-32.png" />
 </head>
 
 Number your tabs for quick keyboard navigation.
