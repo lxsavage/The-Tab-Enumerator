@@ -31,6 +31,7 @@ function getNumberIconPath(number) {
 // Message senders
 ////////////////////////////////////////////////////////////////////////////////
 
+let favicon_timeout_descriptor = 0;
 async function handleSetFavicon() {
     const settings = await chrome.storage.sync.get([
         "lasttab-9",
@@ -77,11 +78,22 @@ async function handleSetFavicon() {
 
     if (numbersTimeoutEnabled) {
         // numbers-timeout: ensure that the favicon numbers are restored after 2 seconds
-        setTimeout(handleRestoreFavicon, 2000);
+        if (favicon_timeout_descriptor > 0) {
+            // Clear any existing timeout
+            clearTimeout(favicon_timeout_descriptor);
+            favicon_timeout_descriptor = 0;
+        }
+        favicon_timeout_descriptor = setTimeout(handleRestoreFavicon, 2000);
     }
 }
 
 async function handleRestoreFavicon() {
+    if (favicon_timeout_descriptor > 0) {
+        // Clear any existing timeout
+        clearTimeout(favicon_timeout_descriptor);
+        favicon_timeout_descriptor = 0;
+    }
+
     const forceTitleMode = !(await chrome.storage.sync.get("favicon-numbers"))[
         "favicon-numbers"
     ];
