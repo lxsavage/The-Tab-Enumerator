@@ -1,3 +1,7 @@
+<head>
+  <link rel="icon" type="image/png" href="/Tab%20Enumerator%20Extension/Resources/images/icon-32.png" />
+</head>
+
 Number your tabs for quick keyboard navigation.
 
 Do you regularly use ⌘+number/CTRL+number keyboard shortcuts in tab navigation,
