@@ -59,8 +59,8 @@ will need to be done to get it to run:
 
 ### Manifest V3 browsers (Chrome, Firefox, &c.)
 
-1. Run the makefile in the `Chrome Extension/` folder to generate a zipped
-   extension
+1. Run the `mv3` make command (`make mv3`) and find the built extension in
+   `dist/TabEnumerator-0.0.0-chrome.zip`
 2. Navigate to extensions page
 3. Drag and drop the zipped extension into the extensions list (may need to
    enable unsigned extensions)
@@ -69,16 +69,11 @@ will need to be done to get it to run:
 
 ### Safari
 
-1. Open the XCode project
-2. Create a product archive (`Product>Archive`)
-3. Select the newly-created archive and select "Distribute App" on the right
-   navigation pane
-4. Select the "Custom" distribution method
-5. Select "Copy App" and save the app in an easily-accessible folder
-6. Access the exported folder, then move "The Tab Enumerator.app" to your
+1. Run the `safari` make command (`make safari`) and find the built disk image in `dist/TabEnumerator-0.0.0-safari.dmg`
+2. Access the exported disk image, then move "The Tab Enumerator.app" to your
    Applications folder
-7. Run the app and select "Quit and open safari settings..."
-8. Enable "The Tab Enumerator" and ensure it has all of its permissions
+3. Run the app and select "Quit and open safari settings..."
+4. Enable "The Tab Enumerator" and ensure it has all of its permissions
    approved for every page
 
 ## Additional Information
