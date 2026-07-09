@@ -1,4 +1,43 @@
-# Added to make building MV3 extension easier
-all:
-	@$(MAKE) -C "clean"
-	@$(MAKE) -C "Chrome Extension"
+ROOT_DIR := $(shell dirname "$(realpath $(MAKEFILE_LIST))")
+
+all: clean mv3 safari
+
+mv3: $(ROOT_DIR)/dist/TabEnumerator-0.0.0-chrome.zip
+
+safari: $(ROOT_DIR)/dist/TabEnumerator-0.0.0-safari.dmg
+
+clean:
+	rm -rf dist/
+	rm -rf build/
+
+$(ROOT_DIR)/dist/TabEnumerator-0.0.0-safari.dmg: $(ROOT_DIR)/build/safariext.xcarchive
+	@mkdir -p $(ROOT_DIR)/build/safariimg/
+	cp -r "$(ROOT_DIR)/build/safariext.xcarchive/Products/Applications/The Tab Enumerator.app" $(ROOT_DIR)/build/safariimg/
+	ln -s /Applications "$(ROOT_DIR)/build/safariimg/Applications"
+
+	@mkdir -p $(ROOT_DIR)/dist/
+	hdiutil create -volname "The Tab Enumerator" -srcfolder $(ROOT_DIR)/build/safariimg/ $@
+	@rmdir -p $(ROOT_DIR)/build/safariimg/
+
+$(ROOT_DIR)/dist/TabEnumerator-0.0.0-chrome.zip: $(ROOT_DIR)/build/resources.zip $(ROOT_DIR)/build/manifest.json
+	@mkdir -p $(ROOT_DIR)/dist/
+	zip -qm $^
+	mv $< $@
+	@echo "Created Manifest V3 extension as $@"
+
+$(ROOT_DIR)/build/safariext.xcarchive:
+	xcodebuild -project "Tab Enumerator.xcodeproj" -scheme "Tab Enumerator" clean archive -configuration release -archivePath $@
+
+$(ROOT_DIR)/build/resources.zip:
+	@mkdir -p $(ROOT_DIR)/build/
+	cd "$(ROOT_DIR)/Tab Enumerator Extension/Resources" && zip -qr "$@" .
+	zip -d $@ _locales/\*
+	@echo "Created resource archive"
+
+$(ROOT_DIR)/build/manifest.json:
+	@mkdir -p $(ROOT_DIR)/build/
+	. "$(ROOT_DIR)/scripts/make-manifest.sh" \
+		"$(ROOT_DIR)/Tab Enumerator Extension/Resources/manifest.json" \
+		"$(ROOT_DIR)/Tab Enumerator Extension/Resources/_locales/en/messages.json" \
+	 > $@
+	@echo "Generated manifest.json"
