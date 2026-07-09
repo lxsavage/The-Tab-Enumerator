@@ -31,7 +31,6 @@ $(ROOT_DIR)/build/safariext.xcarchive:
 $(ROOT_DIR)/build/resources.zip:
 	@mkdir -p $(ROOT_DIR)/build/
 	cd "$(ROOT_DIR)/Tab Enumerator Extension/Resources" && zip -qr "$@" .
-	zip -d $@ _locales/\*
 	@echo "Created resource archive"
 
 $(ROOT_DIR)/build/manifest.json:

@@ -47,14 +47,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5EA6B4DB2FB3BC4100468175 /* Exceptions for "Chrome Extension" folder in "The Tab Enumerator" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"make-manifest.sh",
-				Makefile,
-			);
-			target = 5ECFA6792FB24A1300AFE340 /* The Tab Enumerator */;
-		};
 		5ECF5AD52FC39ECD005A84CE /* Exceptions for "Tab Enumerator" folder in "The Tab Enumerator" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -72,14 +64,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5EA6B2852FB3AB9A00468175 /* Chrome Extension */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				5EA6B4DB2FB3BC4100468175 /* Exceptions for "Chrome Extension" folder in "The Tab Enumerator" target */,
-			);
-			path = "Chrome Extension";
-			sourceTree = "<group>";
-		};
 		5ECFA67C2FB24A1300AFE340 /* Tab Enumerator */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -150,7 +134,6 @@
 		5ECFA6712FB24A1300AFE340 = {
 			isa = PBXGroup;
 			children = (
-				5EA6B2852FB3AB9A00468175 /* Chrome Extension */,
 				5EA6B4E02FB3CE6400468175 /* Project Information */,
 				5ECFA67C2FB24A1300AFE340 /* Tab Enumerator */,
 				5ECFA6AE2FB24A1400AFE340 /* Tab Enumerator Extension */,
@@ -177,7 +160,6 @@
 				5E9242432FC01C0600019387 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				5EA6B2852FB3AB9A00468175 /* Chrome Extension */,
 				5ECFA67C2FB24A1300AFE340 /* Tab Enumerator */,
 			);
 			name = "The Tab Enumerator";
