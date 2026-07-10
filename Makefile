@@ -1,14 +1,20 @@
+#
+# Build Manifest V3 and Safari versions of The Tab Enumerator
+#
 ROOT_DIR := $(shell dirname "$(realpath $(MAKEFILE_LIST))")
 
 all: clean mv3 safari
 
-mv3: $(ROOT_DIR)/dist/TabEnumerator-0.0.0-chrome.zip
-
-safari: $(ROOT_DIR)/dist/TabEnumerator-0.0.0-safari.dmg
-
 clean:
 	rm -rf dist/
 	rm -rf build/
+
+mv3: check-requirements $(ROOT_DIR)/dist/TabEnumerator-0.0.0-chrome.zip
+
+safari: check-requirements $(ROOT_DIR)/dist/TabEnumerator-0.0.0-safari.dmg
+
+check-requirements:
+	. "$(ROOT_DIR)/scripts/check-requirements.sh"
 
 $(ROOT_DIR)/dist/TabEnumerator-0.0.0-safari.dmg: $(ROOT_DIR)/build/safariext.xcarchive
 	@mkdir -p $(ROOT_DIR)/build/safariimg/

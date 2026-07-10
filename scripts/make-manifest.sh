@@ -10,11 +10,6 @@
 # - 2: messages.json path (for name/description subs)
 #
 
-if ! command -v jq > /dev/null 2>&1; then
-    echo "ERROR: jq not found on path; install this through your respective package manager and try again."
-    exit 1
-fi
-
 LOCALE_MESSAGES=`cat "$2"`
 MSG_TITLE=`echo $LOCALE_MESSAGES | jq -r '.extension_name.message'`
 MSG_DESC=`echo $LOCALE_MESSAGES | jq -r '.extension_description.message'`
