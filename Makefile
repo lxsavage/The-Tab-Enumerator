@@ -19,18 +19,18 @@ $(ROOT_DIR)/dist/TabEnumerator-0.0.0-safari.dmg: $(ROOT_DIR)/build/safariext.xca
 	hdiutil create -volname "The Tab Enumerator" -srcfolder $(ROOT_DIR)/build/safariimg/ $@
 	@rmdir -p $(ROOT_DIR)/build/safariimg/
 
-$(ROOT_DIR)/dist/TabEnumerator-0.0.0-chrome.zip: $(ROOT_DIR)/build/resources.zip $(ROOT_DIR)/build/manifest.json
+$(ROOT_DIR)/dist/TabEnumerator-0.0.0-chrome.zip: $(ROOT_DIR)/build/resources.zip
 	@mkdir -p $(ROOT_DIR)/dist/
-	zip -qm $^
 	mv $< $@
 	@echo "Created Manifest V3 extension as $@"
 
 $(ROOT_DIR)/build/safariext.xcarchive:
 	xcodebuild -project "Tab Enumerator.xcodeproj" -scheme "Tab Enumerator" clean archive -configuration release -archivePath $@
 
-$(ROOT_DIR)/build/resources.zip:
+$(ROOT_DIR)/build/resources.zip: $(ROOT_DIR)/build/manifest.json
 	@mkdir -p $(ROOT_DIR)/build/
 	cd "$(ROOT_DIR)/Tab Enumerator Extension/Resources" && zip -qr "$@" .
+	zip -qjm $@ $^
 	@echo "Created resource archive"
 
 $(ROOT_DIR)/build/manifest.json:
