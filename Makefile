@@ -1,18 +1,24 @@
 #
 # Build Manifest V3 and Safari versions of The Tab Enumerator
 #
+.PHONY: ROOT_DIR
 ROOT_DIR := $(shell dirname "$(realpath $(MAKEFILE_LIST))")
 
+.PHONY: all
 all: clean mv3 safari
 
+.PHONY: clean
 clean:
 	rm -rf dist/
 	rm -rf build/
 
+.PHONY: mv3
 mv3: check-requirements $(ROOT_DIR)/dist/TabEnumerator-0.0.0-chrome.zip
 
+.PHONY: safari
 safari: check-requirements $(ROOT_DIR)/dist/TabEnumerator-0.0.0-safari.dmg
 
+.PHONY: check-requirements
 check-requirements:
 	. "$(ROOT_DIR)/scripts/check-requirements.sh"
 
@@ -23,7 +29,6 @@ $(ROOT_DIR)/dist/TabEnumerator-0.0.0-safari.dmg: $(ROOT_DIR)/build/safariext.xca
 
 	@mkdir -p $(ROOT_DIR)/dist/
 	hdiutil create -volname "The Tab Enumerator" -srcfolder $(ROOT_DIR)/build/safariimg/ $@
-	@rmdir -p $(ROOT_DIR)/build/safariimg/
 
 $(ROOT_DIR)/dist/TabEnumerator-0.0.0-chrome.zip: $(ROOT_DIR)/build/resources.zip
 	@mkdir -p $(ROOT_DIR)/dist/
