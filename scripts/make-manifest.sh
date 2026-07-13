@@ -10,9 +10,9 @@
 # - 2: messages.json path (for name/description subs)
 #
 
-LOCALE_MESSAGES=`cat "$2"`
-MSG_TITLE=`echo $LOCALE_MESSAGES | jq -r '.extension_name.message'`
-MSG_DESC=`echo $LOCALE_MESSAGES | jq -r '.extension_description.message'`
+LOCALE_MESSAGES=$(cat "$2")
+MSG_TITLE=$(echo "$LOCALE_MESSAGES" | jq -r '.extension_name.message')
+MSG_DESC=$(echo "$LOCALE_MESSAGES" | jq -r '.extension_description.message')
 
 cat "$1" \
 | jq "(..|strings) |= (                                         \
